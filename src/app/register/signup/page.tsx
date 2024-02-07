@@ -24,10 +24,10 @@ const SignUpPage = () => {
           <MainInput className="w-full" placeholder="رمز عبور" />
           <MainInput className="w-full" placeholder="تکرار رمز عبور" />
           <MainInput className="w-full" placeholder="شماره تماس یا ایمیل" />
-          <section>
+          <section className='flex items-center justify-between'>
             <MainButton className="w-56 " value={"ثبت نام"} />
             <Link href={"/"}>
-              <p></p>
+              <p className='text-2xl text-[var(--primary-blue-color)]'>قبلا ثبت نام کردید؟</p>
             </Link>
           </section>
         </form>
