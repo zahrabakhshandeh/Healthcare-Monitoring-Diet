@@ -1,11 +1,8 @@
 "use client";
-import { ButtonHTMLAttributes, ReactNode, useCallback } from "react";
 
-type TButton = ButtonHTMLAttributes<HTMLButtonElement> & {
-  value: string;
-  className?: string;
-  iconSrc?: any;
-};
+import { TButton } from "@/types";
+import { useCallback } from "react";
+
 
 const MainButton = (props: TButton) => {
   const checkIcon = useCallback(() => {
