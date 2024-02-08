@@ -23,7 +23,7 @@ export default function LoginPage() {
             </div>
           </div>
         </div>
-        <div className="col-span-2">
+        <div className="">
           <LoginArt />
         </div>
       </div>
