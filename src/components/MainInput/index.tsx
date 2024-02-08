@@ -1,10 +1,8 @@
 "use client";
+import { TInput } from "@/types";
 import { InputHTMLAttributes, ReactNode, useCallback, useMemo } from "react";
 
-type TInput = InputHTMLAttributes<HTMLDivElement> & {
-  className?: string;
-  firstIconSrc?: any;
-};
+
 const MainInput = (props: TInput) => {
   const checkFirstIcon = useCallback(() => {
     if (props.firstIconSrc) return <props.firstIconSrc/>;
