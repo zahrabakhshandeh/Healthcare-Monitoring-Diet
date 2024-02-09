@@ -38,7 +38,7 @@ export default function Login() {
                 <Typography sx={{ fontSize: 24, fontWeight: 600, fontFamily: "inter", }}>
                   نام‌کاربری و رمز عبور خود را وارد کنید
                 </Typography>
-                <Link href="/register/signup"> ثبت نام </Link>
+                <Link href="/register/signup" className='text-[var(--primary-blue)] underline'> ثبت نام </Link>
               </div>
 
               <form action="" className="flex w-full flex-col gap-4">
@@ -46,7 +46,7 @@ export default function Login() {
                 <MainInput type="password" placeholder="رمز عبور" />
               </form>
               <div className="flex flex-row gap-10 pt-7 items-center">
-                <Link href="/register/signup" className="text-[var(--primary-blue)]">
+                <Link href="/" className="text-[var(--primary-blue)]">
                   رمز عبورتون رو فراموش کردید؟
                 </Link>
                 <MainButton className="w-44 font-bold" value={"ورود"} />

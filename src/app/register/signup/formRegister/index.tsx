@@ -12,7 +12,7 @@ const FormRegister = () => {
   return (
     <form action="" className="flex w-full flex-col gap-4">
       <MainInput
-        type="text"
+        type="number"
         className="w-full"
         firstIconSrc={ID}
         placeholder="کد ملی"
