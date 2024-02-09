@@ -48,7 +48,7 @@ export default function Login() {
                 <MainInput type="password" placeholder="رمز عبور" />
               </form>
               <div className="flex flex-row gap-10 pt-7 items-center">
-                <Link href="/" className="text-[var(--primary-blue)]">
+                <Link href="/register/signup" className="text-[var(--primary-blue)]">
                   رمز عبورتون رو فراموش کردید؟
                 </Link>
                 <MainButton className="w-44 font-bold" value={"ورود"} />
