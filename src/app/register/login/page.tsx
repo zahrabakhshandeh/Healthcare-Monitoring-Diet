@@ -6,9 +6,7 @@ import MainInput from "@/components/MainInput";
 import Link from "next/link";
 import { Grid, Typography } from "@mui/material";
 import LoginByButton from "@/components/LoginOptiontsButton";
-import Google from "/public/google.svg";
-import Apple from "/public/apple.svg";
-import Facebook from "/public/facebook.svg";
+
 export default function Login() {
   return (
     <section>
@@ -37,10 +35,10 @@ export default function Login() {
                 ورود | ثبت نام
               </Typography>
               <div className="flex flex-row gap-4 items-center justify-center pb-8">
-                <Typography sx={{ fontSize: 24, fontWeight: 500 }}>
+                <Typography sx={{ fontSize: 24, fontWeight: 600, fontFamily: "inter", }}>
                   نام‌کاربری و رمز عبور خود را وارد کنید
                 </Typography>
-                <Link href="/"> ثبت نام </Link>
+                <Link href="/register/signup"> ثبت نام </Link>
               </div>
 
               <form action="" className="flex w-full flex-col gap-4">
@@ -70,9 +68,9 @@ export default function Login() {
             <hr className="border-[var(--orange-color)] border-2 w-40"></hr>
           </div>
           <div className="flex justify-between mt-6 w-1/2">
-            <LoginByButton title="facebook" icon={Facebook} />
-            <LoginByButton title="apple" icon={Apple} />
-            <LoginByButton title="google" icon={Google} />
+            <LoginByButton variant='apple'/>
+            <LoginByButton />
+            <LoginByButton variant='google'  />
           </div>
         </Grid>
         <Grid xs={6} sx={{ padding: "38px" }}>
