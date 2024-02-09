@@ -17,12 +17,12 @@ const FormRegister = () => {
         firstIconSrc={UserProfile}
         placeholder="نام و نام خانوادگی"
       />
-      <MainInput
+      <MainInput type="password"
         className="w-full"
         firstIconSrc={PasswordKey}
         placeholder="رمز عبور"
       />
-      <MainInput
+      <MainInput type="password"
         className="w-full"
         firstIconSrc={PasswordKey}
         placeholder="تکرار رمز عبور"

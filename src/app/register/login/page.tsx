@@ -5,7 +5,7 @@ import MainButton from '@/components/MainButton';
 import MainInput from '@/components/MainInput';
 import Link from "next/link";
 import { Grid, Typography } from '@mui/material';
-
+import LoginByButton from '@/components/LoginOptiontsButton';
 
 export default function Login() {
   
@@ -24,7 +24,7 @@ export default function Login() {
               </div>
 
               <form action="" className="flex w-full flex-col gap-4">
-                <MainInput type='text' className="w-full" placeholder="نام کاربری"/>
+                <MainInput className="w-full" placeholder="نام کاربری"/>
                 <MainInput type='password' placeholder="رمز عبور"/>
               </form>
               <div className='flex flex-row gap-10 pt-7 items-center'>
@@ -40,6 +40,11 @@ export default function Login() {
               یا ورود با
             </Typography>
             <hr className='border-[var(--orange-color)] border-2 w-40'></hr>
+          </div>
+          <div className="flex flex-row pt-6 gap-2">
+            <LoginByButton variant="google" />
+            <LoginByButton variant="apple" />            
+            <LoginByButton />
           </div>
         </Grid>
         <Grid xs={6} sx={{padding: '38px'}}>
