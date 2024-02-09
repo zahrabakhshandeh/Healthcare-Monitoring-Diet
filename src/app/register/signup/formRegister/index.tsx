@@ -31,7 +31,7 @@ const FormRegister = () => {
       <section className="flex flex-row-reverse items-center justify-between">
         <MainButton className="w-52 " iconSrc={SignUp} value={"ثبت نام"} />
         <Link href={"/"}>
-          <p className="text-lg text-[var(--primary-blue-color)]">
+          <p className="text-lg text-[var(--primary-blue)]">
             قبلا ثبت نام کردید؟
           </p>
         </Link>
