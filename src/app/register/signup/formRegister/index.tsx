@@ -12,7 +12,7 @@ const FormRegister = () => {
   return (
     <form action="" className="flex w-full flex-col gap-4">
       <MainInput
-        type="number"
+        type="text"
         className="w-full"
         firstIconSrc={ID}
         placeholder="کد ملی"
@@ -41,7 +41,7 @@ const FormRegister = () => {
         firstIconSrc={Email}
         placeholder="ایمیل"
       />
-      <section className="flex flex-row-reverse items-center justify-between">
+      <section className="flex flex-row-reverse mt-[2.625rem] items-center justify-between">
         <MainButton className="w-52 " iconSrc={SignUp} value={"ثبت نام"} />
         <Link href={"/register/login"}>
           <p className="text-lg text-[var(--primary-blue)]">
