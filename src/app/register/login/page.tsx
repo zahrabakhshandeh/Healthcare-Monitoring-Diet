@@ -6,6 +6,7 @@ import MainInput from "@/components/MainInput";
 import Link from "next/link";
 import { Grid, Typography } from "@mui/material";
 import LoginByButton from "@/components/LoginOptiontsButton";
+import FormLogin from "./formLogin";
 
 export default function Login() {
   return (
@@ -35,16 +36,21 @@ export default function Login() {
                 ورود | ثبت نام
               </Typography>
               <div className="flex flex-row gap-4 items-center justify-center pb-8">
-                <Typography sx={{ fontSize: 24, fontWeight: 600, fontFamily: "inter", }}>
+                <Typography
+                  sx={{ fontSize: 24, fontWeight: 600, fontFamily: "inter" }}
+                >
                   نام‌کاربری و رمز عبور خود را وارد کنید
                 </Typography>
-                <Link href="/register/signup" className='text-[var(--primary-blue)] underline'> ثبت نام </Link>
+                <Link
+                  href="/register/signup"
+                  className="text-[var(--primary-blue)] underline"
+                >
+                  {" "}
+                  ثبت نام{" "}
+                </Link>
               </div>
 
-              <form action="" className="flex w-full flex-col gap-4">
-                <MainInput className="w-full" placeholder="نام کاربری" />
-                <MainInput type="password" placeholder="رمز عبور" />
-              </form>
+              <FormLogin/>
               <div className="flex flex-row gap-10 pt-7 items-center">
                 <Link href="/" className="text-[var(--primary-blue)]">
                   رمز عبورتون رو فراموش کردید؟
@@ -68,9 +74,9 @@ export default function Login() {
             <hr className="border-[var(--orange-color)] border-2 w-40"></hr>
           </div>
           <div className="flex justify-between mt-6 w-1/2">
-            <LoginByButton variant='apple'/>
+            <LoginByButton variant="apple" />
             <LoginByButton />
-            <LoginByButton variant='google'  />
+            <LoginByButton variant="google" />
           </div>
         </Grid>
         <Grid xs={6} sx={{ padding: "38px" }}>
