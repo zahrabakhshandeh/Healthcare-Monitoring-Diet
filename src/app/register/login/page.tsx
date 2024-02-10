@@ -10,7 +10,7 @@ import FormLogin from "./formLogin";
 
 export default function Login() {
   return (
-    <section>
+    <>
       <Grid container spacing={0}>
         <Grid
           xs={6}
@@ -83,6 +83,6 @@ export default function Login() {
           <LoginArt />
         </Grid>
       </Grid>
-    </section>
+    </>
   );
 }
