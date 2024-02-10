@@ -1,14 +1,14 @@
-import { ButtonHTMLAttributes, InputHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, FunctionComponent, InputHTMLAttributes } from "react";
 
 export type TButton = ButtonHTMLAttributes<HTMLButtonElement> & {
   value: string;
   className?: string;
-  iconSrc?: any;
+  iconSrc?: FunctionComponent;
 };
 
 export type TInput = InputHTMLAttributes<HTMLDivElement> & {
   className?: string;
-  firstIconSrc?: any;
+  firstIconSrc?: FunctionComponent;
 };
 
 export interface ButtonPropsTypes {
