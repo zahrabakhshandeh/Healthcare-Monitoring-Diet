@@ -1,29 +1,24 @@
-import React, { ReactNode, useCallback} from "react";
+import React, { FunctionComponent, ReactNode, useCallback} from "react";
 import GoogleLogo from "/public/google.svg";
 import FaceBookLogo from "/public/facebook.svg";
 import AppleLogo from "/public/apple.svg";
+import { ButtonPropsTypes } from "@/types";
 
-const LoginByButton = (props: any) => {
-    if(props.variant === 'google') {
-        return(
-            <button type="submit" className="bg-[var(--new-gray)] py-3 px-5 rounded-3xl shadow-md ">
-                <GoogleLogo/>
-            </button>
-        )
-    }
-    else if(props.variant === 'apple'){
-        return(
-        <button  className="bg-[var(--new-gray)] px-5 rounded-3xl shadow-md ">
-            <AppleLogo/>
+
+const logoMap: { [key: string]: FunctionComponent } = {
+    google: GoogleLogo,
+    apple: AppleLogo,
+    default: FaceBookLogo,
+};
+
+const LoginByButton: React.FC<ButtonPropsTypes> = ({variant}) => {
+
+    const Logo = logoMap[variant || 'default'];
+
+    return (
+        <button type="submit" className="bg-[var(--new-gray)] py-2.5 px-5 rounded-3xl shadow-md ">
+            <Logo />
         </button>
-    )
-    }
-    else{
-        return(
-            <button className="bg-[var(--new-gray)] px-5 rounded-3xl shadow-md">
-                <FaceBookLogo/>
-            </button>
-            )
-    }
+    );
 };
 export default LoginByButton;

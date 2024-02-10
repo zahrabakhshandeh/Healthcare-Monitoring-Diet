@@ -7,6 +7,7 @@ const MainButton = (props: TButton) => {
   const checkIcon = useCallback(() => {
     if (props.iconSrc) return <props.iconSrc />;
   }, []);
+
   return (
     <button
       className={`${props.className} font-semibold flex ${

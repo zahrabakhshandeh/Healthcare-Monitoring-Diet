@@ -10,3 +10,7 @@ export type TInput = InputHTMLAttributes<HTMLDivElement> & {
   className?: string;
   firstIconSrc?: any;
 };
+
+export interface ButtonPropsTypes {
+  variant?: 'google' | 'apple';
+}
