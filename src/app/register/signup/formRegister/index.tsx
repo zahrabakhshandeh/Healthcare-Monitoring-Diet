@@ -6,7 +6,7 @@ import MainButton from "@/components/MainButton";
 import PasswordKey from "/public/passwordkey.svg";
 import Email from "/public/email.svg";
 import ID from "/public/id.svg";
-import SignUp from "/public/signup-icon.svg";
+import SignUp from "/public/signup-white.svg";
 
 const FormRegister = () => {
   return (
