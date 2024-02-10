@@ -1,10 +1,9 @@
 import SignUpArt from "/public/signup.svg";
-import Link from "next/link";
 import FormRegister from "./formRegister";
 
 const SignUpPage = () => {
   return (
-    <>
+    <main className="bg-slate-50 flex px-5  justify-around items-center h-screen">
       <div className="bg-slate-50">
         <SignUpArt />
       </div>
@@ -14,12 +13,12 @@ const SignUpPage = () => {
             ثبت نام
           </h1>
           <p className="text-2xl text-[var(--black)] font-semibold">
-            obuwpgub2wupgbp24pu خودتون رو به ما معرفی کنید
+            خودتون رو به ما معرفی کنید
           </p>
         </div>
         <FormRegister />
       </section>
-    </>
+    </main>
   );
 };
 
