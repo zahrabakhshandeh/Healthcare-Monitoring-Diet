@@ -8,7 +8,7 @@ const NotFound = () => {
             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', margin: '2rem', }}>
                 <Typography
                 sx={{fontFamily: 'inter', fontWeight: '900', fontSize: '2rem', }}>
-                    !صفحه مورد نظر پیدا نشد
+                    صفحه مورد نظر پیدا نشد
                 </Typography>
                 <Link href='/' className="text-[var(--primary-blue)]"> 
                 صفحه اصلی</Link>

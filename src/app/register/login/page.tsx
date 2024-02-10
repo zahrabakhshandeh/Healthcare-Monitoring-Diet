@@ -1,11 +1,11 @@
 import React from "react";
 import LoginArt from "/public/login.svg";
-import "../../globals.css";
 import MainButton from "@/components/MainButton";
 import MainInput from "@/components/MainInput";
 import Link from "next/link";
 import { Box, Grid, Typography } from "@mui/material";
 import LoginByButton from "@/components/LoginOptiontsButton";
+import FormLogin from "./formLogin";
 
 export default function Login() {
   return (
@@ -16,10 +16,8 @@ export default function Login() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            justifyItems: "center",
             flexDirection: "column",
             paddingTop: '1rem',
-            marginRight: '1.2rem'
           }}>
             <div className="flex flex-col">
               <div className="flex flex-col items-start gap-3">
@@ -42,10 +40,7 @@ export default function Login() {
                   <Link href="/register/signup" className='text-[var(--primary-blue)] underline'> ثبت نام </Link>
                 </div>
 
-                <form action="" className="flex w-full flex-col gap-4">
-                  <MainInput className="w-full" placeholder="نام کاربری" />
-                  <MainInput type="password" placeholder="رمز عبور" />
-                </form>
+                <FormLogin/>
                 <div className="flex flex-row gap-10 pt-7 items-center">
                   <Link href="/" className="text-[var(--primary-blue)]">
                     رمز عبورتون رو فراموش کردید؟
