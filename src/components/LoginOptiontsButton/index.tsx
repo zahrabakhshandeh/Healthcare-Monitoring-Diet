@@ -3,7 +3,7 @@ import GoogleLogo from "/public/google.svg";
 import FaceBookLogo from "/public/facebook.svg";
 import AppleLogo from "/public/apple.svg";
 
-const LoginByButton = (props: any) => {
+const LoginByButton = (props: {variant ?: string}) => {
     if(props.variant === 'google') {
         return(
             <button type="submit" className="bg-[var(--new-gray)] py-3 px-5 rounded-3xl shadow-md ">
