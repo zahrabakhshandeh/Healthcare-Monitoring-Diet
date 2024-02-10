@@ -1,6 +1,5 @@
 import React from "react";
 import LoginArt from "/public/login.svg";
-import "../../globals.css";
 import MainButton from "@/components/MainButton";
 import MainInput from "@/components/MainInput";
 import Link from "next/link";
