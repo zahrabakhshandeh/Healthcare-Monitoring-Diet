@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --primary-blue: #4648BC;
-  --back-ground-white: #FEFEFE;
-  --black: #0F0F0F;
-  --orange-color: #FFA45A;
-  --second-white: #F1F1F1;
-  --new-gray: #F9F8F4;
+  --primary-blue: #4648bc;
+  --back-ground-white: #fefefe;
+  --black: #0f0f0f;
+  --orange-color: #ffa45a;
+  --second-white: #f1f1f1;
+  --new-gray: #f9f8f4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,14 +19,22 @@
   }
 }
 
-h1 , h2 , h3 , h4 , h5 , h6 , span , p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
   color: var(--black);
+  font-family: Vazirmatn, sans-serif !important;
 }
 
 body {
   color: var;
   background: var(--back-ground-white);
-  direction:rtl;
+  direction: rtl;
 }
 
 @layer utilities {
