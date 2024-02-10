@@ -29,8 +29,8 @@ export default function Login() {
               <div className="flex flex-col items-start gap-3">
                 <Typography
                   sx={{
-                    fontSize: "3.6rem",
-                    paddingBottom: "92px",
+                    fontSize: "2.25rem",
+                    marginBottom: "92px",
                     fontFamily: "inter",
                     fontWeight: 900,
                   }}
