@@ -5,14 +5,18 @@ import PasswordKey from "/public/passwordkey.svg";
 import Link from "next/link";
 import MainButton from "@/components/MainButton";
 import LoginIcon from "/public/login-white.svg";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const FormLogin = () => {
   
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
-  const handelEnter = (event:any) =>{
+  useEffect(()=>{
+    usernameRef.current?.focus()
+  },[])
+
+  const handelEnter = (event: React.KeyboardEvent<HTMLFormElement>) =>{
     if(event.key === 'Enter'){
       if (document.activeElement === usernameRef.current && passwordRef.current){
         passwordRef.current.focus();
@@ -22,7 +26,7 @@ const FormLogin = () => {
   }
   return (
     <>
-      <form action="" className="flex w-full flex-col gap-4" onKeyDown={handelEnter}>
+      <form action="" className="flex w-full flex-col gap-4" onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>)=>handelEnter(e)}>
         <MainInput
           ref={usernameRef}
           firstIconSrc={UserProfile}
