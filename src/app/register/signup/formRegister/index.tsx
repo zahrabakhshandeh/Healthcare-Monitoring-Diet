@@ -7,35 +7,77 @@ import PasswordKey from "/public/passwordkey.svg";
 import Email from "/public/email.svg";
 import ID from "/public/id.svg";
 import SignUp from "/public/signup-white.svg";
+import { useEffect, useRef } from "react";
 
 const FormRegister = () => {
+  const userIdRef = useRef<HTMLInputElement>(null);
+  const usernameRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const passwordAgainRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    userIdRef.current?.focus();
+  }, []);
+
+  const handelEnter = (event: React.KeyboardEvent<HTMLFormElement>) => {
+    console.log(event, usernameRef);
+    if (event.key === "Enter") {
+      if (userIdRef.current === event.target) {
+        event.preventDefault();
+        usernameRef.current?.focus();
+      }
+      if (usernameRef.current === event.target) {
+        event.preventDefault();
+        passwordRef.current?.focus();
+      }
+      if (passwordRef.current === event.target) {
+        event.preventDefault();
+        passwordAgainRef.current?.focus();
+      }
+      if (passwordAgainRef.current === event.target) {
+        event.preventDefault();
+        emailRef.current?.focus();
+      }
+    }
+  };
+  
   return (
-    <form action="" className="flex w-full flex-col gap-4">
+    <form
+      action=""
+      onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>) => handelEnter(e)}
+      className="flex w-full flex-col gap-4"
+    >
       <MainInput
         type="text"
+        ref={userIdRef}
         className="w-full"
         firstIconSrc={ID}
         placeholder="کد ملی"
       />
       <MainInput
         className="w-full"
+        ref={usernameRef}
         type="text"
         firstIconSrc={UserProfile}
         placeholder="نام و نام خانوادگی"
       />
       <MainInput
+        ref={passwordRef}
         type="password"
         className="w-full"
         firstIconSrc={PasswordKey}
         placeholder="رمز عبور"
       />
       <MainInput
+        ref={passwordAgainRef}
         type="password"
         className="w-full"
         firstIconSrc={PasswordKey}
         placeholder="تکرار رمز عبور"
       />
       <MainInput
+        ref={emailRef}
         type="email"
         className="w-full"
         firstIconSrc={Email}
