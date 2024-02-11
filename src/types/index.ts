@@ -1,4 +1,8 @@
-import { ButtonHTMLAttributes, FunctionComponent, InputHTMLAttributes } from "react";
+import {
+  ButtonHTMLAttributes,
+  FunctionComponent,
+  InputHTMLAttributes,
+} from "react";
 
 export type TButton = ButtonHTMLAttributes<HTMLButtonElement> & {
   value: string;
@@ -7,10 +11,19 @@ export type TButton = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export type TInput = InputHTMLAttributes<HTMLDivElement> & {
+  register?: any;
   className?: string;
   firstIconSrc?: FunctionComponent;
 };
 
 export interface ButtonPropsTypes {
-  variant?: 'google' | 'apple';
+  variant?: "google" | "apple";
 }
+
+export type SignUpDataType = {
+  userid: string;
+  username: string;
+  pass: string;
+  passagain: string;
+  email: string;
+};
