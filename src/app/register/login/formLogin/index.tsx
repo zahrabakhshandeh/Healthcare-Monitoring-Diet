@@ -1,11 +1,12 @@
 "use client";
+import { useEffect, useRef } from "react";
 import MainInput from "@/components/MainInput";
 import UserProfile from "/public/profile-circle.svg";
 import PasswordKey from "/public/passwordkey.svg";
 import Link from "next/link";
 import MainButton from "@/components/MainButton";
 import LoginIcon from "/public/login-white.svg";
-import { useEffect, useRef } from "react";
+import {loginSchema} from '../../../../validation/loginValidation/index'
 
 const FormLogin = () => {
   
@@ -24,9 +25,21 @@ const FormLogin = () => {
       } 
     }
   }
+
+  const loginValidation = async(event: any) =>{
+    event.preventDefault();
+    let formData = {
+      username: event.target[0].value,
+      password: event.target[1].value
+    }
+    const isValid = await loginSchema.isValid(formData);
+    console.log(formData);
+    console.log(isValid);
+  }
+
   return (
     <>
-      <form action="" className="flex w-full flex-col gap-4" onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>)=>handelEnter(e)}>
+      <form action="" className="flex w-full flex-col gap-4" onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>)=>handelEnter(e)} onSubmit={loginValidation}>
         <MainInput
           ref={usernameRef}
           firstIconSrc={UserProfile}

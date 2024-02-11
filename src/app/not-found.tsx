@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import NotFoundSVG from "/public/404.svg";
 import Link from "next/link";
+
 const NotFound = () => {
   return (
     <Grid

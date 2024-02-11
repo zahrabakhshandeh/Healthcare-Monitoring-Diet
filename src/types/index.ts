@@ -9,7 +9,6 @@ export type TButton = ButtonHTMLAttributes<HTMLButtonElement> & {
 export type TInput = InputHTMLAttributes<HTMLDivElement> & {
   className?: string;
   firstIconSrc?: FunctionComponent;
-  ref?: any;
 };
 
 export interface ButtonPropsTypes {
