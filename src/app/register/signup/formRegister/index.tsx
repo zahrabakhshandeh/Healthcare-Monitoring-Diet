@@ -8,53 +8,53 @@ import Email from "/public/email.svg";
 import ID from "/public/id.svg";
 import SignUp from "/public/signup-white.svg";
 import { useEffect, useRef } from "react";
-import useRegister from "../useRegister";
+import useRegister from "../../../../validation/signupValidation/useRegister";
 
 const FormRegister = () => {
-  const userIdRef = useRef<HTMLInputElement>(null);
-  // const usernameRef = useRef<HTMLInputElement>(null);
-  // const passwordRef = useRef<HTMLInputElement>(null);
-  // const passwordAgainRef = useRef<HTMLInputElement>(null);
-  // const emailRef = useRef<HTMLInputElement>(null);
+  const userIdRef = useRef<HTMLInputElement| null>(null);
+  const usernameRef = useRef<HTMLInputElement| null>(null);
+  const passwordRef = useRef<HTMLInputElement| null>(null);
+  const passwordAgainRef = useRef<HTMLInputElement| null>(null);
+  const emailRef = useRef<HTMLInputElement| null>(null);
 
+  
+  const inputRefs = [userIdRef, usernameRef, passwordRef, passwordAgainRef, emailRef];
+
+  const handleEnter = (event: React.KeyboardEvent<HTMLFormElement>) => {
+    if(event.key === 'Enter'){
+      for(let i = 0; i < inputRefs.length; i++){
+        if (document.activeElement === inputRefs[i].current){
+          if(inputRefs[i+1]?.current){
+            inputRefs[i+1].current?.focus();
+            event.preventDefault();
+          } else {
+            // Submit the form if there's no next input
+            event.currentTarget.submit();
+          }
+          break;
+        } 
+      }
+    }
+  }
+  
+  
   const { handleSubmit, handelValueInputs, register } = useRegister();
 
   useEffect(() => {
     userIdRef.current?.focus();
   }, []);
 
-  // const handelEnter = (event: React.KeyboardEvent<HTMLFormElement>) => {
-  //   console.log(event, usernameRef);
-  //   if (event.key === "Enter") {
-  //     if (userIdRef.current === event.target) {
-  //       event.preventDefault();
-  //       usernameRef.current?.focus();
-  //     }
-  //     if (usernameRef.current === event.target) {
-  //       event.preventDefault();
-  //       passwordRef.current?.focus();
-  //     }
-  //     if (passwordRef.current === event.target) {
-  //       event.preventDefault();
-  //       passwordAgainRef.current?.focus();
-  //     }
-  //     if (passwordAgainRef.current === event.target) {
-  //       event.preventDefault();
-  //       emailRef.current?.focus();
-  //     }
-  //   }
-  // };
 
   return (
     <form
       action=""
       onSubmit={handleSubmit(handelValueInputs)}
-      // onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>) => handelEnter(e)}
+      onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>) => handleEnter(e)}
       className="flex w-full flex-col gap-4"
     >
       <MainInput
         type="text"
-        // ref={userIdRef}
+        ref={userIdRef}
         register={register("userid")}
         className="w-full"
         firstIconSrc={ID}
@@ -62,14 +62,14 @@ const FormRegister = () => {
       />
       <MainInput
         className="w-full"
-        // ref={usernameRef}
+        ref={usernameRef}
         register={register("username")}
         type="text"
         firstIconSrc={UserProfile}
         placeholder="نام و نام خانوادگی"
       />
       <MainInput
-        // ref={passwordRef}
+        ref={passwordRef}
         register={register("pass")}
         type="password"
         className="w-full"
@@ -77,7 +77,7 @@ const FormRegister = () => {
         placeholder="رمز عبور"
       />
       <MainInput
-        // ref={passwordAgainRef}
+        ref={passwordAgainRef}
         register={register("passagain")}
         type="password"
         className="w-full"
@@ -85,7 +85,7 @@ const FormRegister = () => {
         placeholder="تکرار رمز عبور"
       />
       <MainInput
-        // ref={emailRef}
+        ref={emailRef}
         register={register("email")}
         type="email"
         className="w-full"
