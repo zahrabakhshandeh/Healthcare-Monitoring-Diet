@@ -30,8 +30,6 @@ const FormRegister = () => {
           if(inputRefs[i+1]?.current){
             inputRefs[i+1].current?.focus();
             event.preventDefault();
-          } else {
-            event.currentTarget.submit();
           }
           break;
         } 
@@ -89,9 +87,8 @@ const FormRegister = () => {
             />
           )}
         />
-        {errors.password && <p className='text-[var(--red)]'>{errors.password.message}</p>}
+        {errors.username && <p className='text-[var(--red)]'>{errors.username.message}</p>}
       
-
         <Controller
           control={control}
           name="password"
