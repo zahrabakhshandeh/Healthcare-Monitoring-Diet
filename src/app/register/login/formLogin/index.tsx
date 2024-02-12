@@ -12,6 +12,7 @@ import { Controller, useForm } from "react-hook-form";
 
 
 const FormLogin = () => {
+
   const { control, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(loginSchema),
   });
@@ -20,9 +21,26 @@ const FormLogin = () => {
     console.log(data);
   };
 
+  const usernameRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+
+  useEffect(()=>{
+    usernameRef.current?.focus()
+  },[])
+
+
+  const handelEnter = (event: React.KeyboardEvent<HTMLFormElement>) =>{
+    if(event.key === 'Enter'){
+      if (document.activeElement === usernameRef.current && passwordRef.current){
+        passwordRef.current.focus();
+        event.preventDefault();
+      } 
+    }
+  }
+
   return (
     <>
-      <form action="" className="flex w-full flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+      <form action="" className="flex w-full flex-col gap-4" onSubmit={handleSubmit(onSubmit)} onKeyDown={handelEnter}>
         <Controller
           control={control}
           name="username"
@@ -32,6 +50,7 @@ const FormLogin = () => {
               className="w-full"
               placeholder="نام کاربری"
               {...field}
+              ref={usernameRef}
             />
           )}
         />
@@ -46,6 +65,7 @@ const FormLogin = () => {
               type="password"
               placeholder="رمز عبور"
               {...field}
+              ref={passwordRef}
             />
           )}
         />
