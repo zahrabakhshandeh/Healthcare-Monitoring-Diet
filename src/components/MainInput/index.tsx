@@ -33,7 +33,7 @@ const MainInput = forwardRef<
       <input
         {...props.register}
         {...props}
-        // ref={ref}
+        ref={ref}
         className="outline-none w-full placeholder:text-sm bg-transparent border-none"
         type={showPassword ? "text" : props.type}
       />

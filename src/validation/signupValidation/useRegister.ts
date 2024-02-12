@@ -1,55 +1,58 @@
-import { toast } from "react-toastify";
-import { useCallback, useState } from "react";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
-import { SignUpDataType } from "@/types";
-import { useRouter } from "next/navigation";
 
-const SignUpschema = yup.object({
-  userid: yup.string(),
+export const SignUpSchema = yup.object({
+  userID: yup.string().min(2).required('Required'),
   username: yup.string(),
-  pass: yup.string(),
-  passagain: yup.string(),
+  password: yup.string()
+  .min(8,'')
+  .max(16, '')
+  .matches(/[a-z]/, 'رمز عبور باید حداقل یک حرف کوچک داشته باشد')
+  .matches(/[A-Z]/, 'رمز عبور باید حداقل یک حرف بزرگ داشته باشد')
+  .matches(/[0-9]/, 'رمز عبور باید حداقل یک عدد داشته باشد')
+  .matches(/[!@#%^&*(),.?":{}|<>]/, 'رمز عبور باید حداقل یک کاراکتر خاص داشته باشد') 
+  .required('رمز عبور را وارد کنید'),
+  passwordCheck: yup.string()
+  .oneOf([yup.ref('password')], 'Passwords must match'),
   email: yup.string(),
 });
 
-const useRegister = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<any>({
-    resolver: yupResolver(SignUpschema),
-  });
 
-  const { push } = useRouter();
-  const userIdRegex = /^\d{10}$/;
-  const userNameRegex = /^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
-  const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+// const useRegister = () => {
+//   const {
+//     register,
+//     handleSubmit,
+//     formState: { errors },
+//   } = useForm<any>({
+//     resolver: yupResolver(SignUpSchema),
+//   });
 
-  const handelValueInputs = useCallback((data: SignUpDataType) => {
-    if (
-      userIdRegex.test(data.userid) &&
-      userNameRegex.test(data.username) &&
-      passRegex.test(data.pass) &&
-      passRegex.test(data.passagain) &&
-      data.pass == data.passagain
-    ) {
-      push("/");
-      console.log(data);
-      toast.success("you are sign in now!");
-    } else {
-      toast.error("Something wrong");
-    }
-  }, []);
+//   const { push } = useRouter();
+//   const userIdRegex = /^\d{10}$/;
+//   const userNameRegex = /^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
+//   const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-  return {
-    handelValueInputs,
-    register,
-    errors,
-    handleSubmit,
-  };
-};
+//   const handelValueInputs = useCallback((data: SignUpDataType) => {
+//     if (
+//       userIdRegex.test(data.userid) &&
+//       userNameRegex.test(data.username) &&
+//       passRegex.test(data.pass) &&
+//       passRegex.test(data.passagain) &&
+//       data.pass == data.passagain
+//     ) {
+//       push("/");
+//       console.log(data);
+//       toast.success("you are sign in now!");
+//     } else {
+//       toast.error("Something wrong");
+//     }
+//   }, []);
 
-export default useRegister;
+//   return {
+//     handelValueInputs,
+//     register,
+//     errors,
+//     handleSubmit,
+//   };
+// };
+
+// export default useRegister;

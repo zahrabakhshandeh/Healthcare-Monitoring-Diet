@@ -2,6 +2,7 @@ import SignUpArt from "/public/signup.svg";
 import FormRegister from "./formRegister";
 
 const SignUpPage = () => {
+  
   return (
     <main className="flex min-[500px]:flex-col-reverse px-5  justify-around items-center md:flex-row  md:h-screen  min-[500px]:gap-12 md:gap-0 pt-10">
       <SignUpArt />

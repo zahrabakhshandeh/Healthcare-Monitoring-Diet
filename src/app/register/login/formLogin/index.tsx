@@ -6,7 +6,11 @@ import PasswordKey from "/public/passwordkey.svg";
 import Link from "next/link";
 import MainButton from "@/components/MainButton";
 import LoginIcon from "/public/login-white.svg";
-import {loginSchema} from '../../../../validation/loginValidation/index'
+import {loginSchema} from '../../../../validation/loginValidation/useLogin'
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Controller, useForm } from "react-hook-form";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const FormLogin = () => {
 
@@ -25,19 +29,25 @@ const FormLogin = () => {
     usernameRef.current?.focus()
   },[])
 
+  const inputRefs = [usernameRef, passwordRef,];
 
-  const handelEnter = (event: React.KeyboardEvent<HTMLFormElement>) =>{
+  const handleEnter = (event: React.KeyboardEvent<HTMLFormElement>) => {
     if(event.key === 'Enter'){
-      if (document.activeElement === usernameRef.current && passwordRef.current){
-        passwordRef.current.focus();
-        event.preventDefault();
-      } 
+      for(let i = 0; i < inputRefs.length; i++){
+        if (document.activeElement === inputRefs[i].current){
+          if(inputRefs[i+1]?.current){
+            inputRefs[i+1].current?.focus();
+            event.preventDefault();
+          } 
+          break;
+        } 
+      }
     }
   }
-
+  
   return (
     <>
-      <form action="" className="flex w-full flex-col gap-4" onSubmit={handleSubmit(onSubmit)} onKeyDown={handelEnter}>
+      <form action="" className="flex w-full flex-col gap-4" onSubmit={handleSubmit(onSubmit)} onKeyDown={handleEnter}>
         <Controller
           control={control}
           name="username"
@@ -65,18 +75,6 @@ const FormLogin = () => {
               ref={passwordRef}
             />
           )}
-      <form action="" className="flex w-full flex-col gap-4" onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>)=>handelEnter(e)} onSubmit={loginValidation}>
-        <MainInput
-          ref={usernameRef}
-          firstIconSrc={UserProfile}
-          className="w-full"
-          placeholder="نام کاربری"
-        />
-        <MainInput
-          ref={passwordRef}
-          firstIconSrc={PasswordKey}
-          type="password"
-          placeholder="رمز عبور"
         />
         {errors.password && <p className='text-[var(--red)]'>{errors.password.message}</p>}
 
