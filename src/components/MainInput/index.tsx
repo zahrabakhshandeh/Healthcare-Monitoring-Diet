@@ -24,7 +24,7 @@ const MainInput = forwardRef<
       );
     }
   }, [showPassword]);
-
+  
   return (
     <div
       className={`flex rounded-2xl items-center shadow-sm drop-shadow bg-[var(--new-gray)] gap-2 p-2 px-4`}
@@ -36,10 +36,10 @@ const MainInput = forwardRef<
         // ref={ref}
         className="outline-none w-full placeholder:text-sm bg-transparent border-none"
         type={showPassword ? "text" : props.type}
-        onChange={props.onChange}
       />
       {eyeIconMemo()}
     </div>
   );
 });
+
 export default MainInput;

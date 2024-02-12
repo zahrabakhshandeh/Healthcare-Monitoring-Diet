@@ -7,9 +7,6 @@ import Link from "next/link";
 import MainButton from "@/components/MainButton";
 import LoginIcon from "/public/login-white.svg";
 import {loginSchema} from '../../../../validation/loginValidation/index'
-import { yupResolver } from "@hookform/resolvers/yup";
-import { Controller, useForm } from "react-hook-form";
-
 
 const FormLogin = () => {
 
@@ -68,6 +65,18 @@ const FormLogin = () => {
               ref={passwordRef}
             />
           )}
+      <form action="" className="flex w-full flex-col gap-4" onKeyDown={(e: React.KeyboardEvent<HTMLFormElement>)=>handelEnter(e)} onSubmit={loginValidation}>
+        <MainInput
+          ref={usernameRef}
+          firstIconSrc={UserProfile}
+          className="w-full"
+          placeholder="نام کاربری"
+        />
+        <MainInput
+          ref={passwordRef}
+          firstIconSrc={PasswordKey}
+          type="password"
+          placeholder="رمز عبور"
         />
         {errors.password && <p className='text-[var(--red)]'>{errors.password.message}</p>}
 

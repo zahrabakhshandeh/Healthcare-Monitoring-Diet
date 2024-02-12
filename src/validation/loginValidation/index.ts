@@ -1,12 +1,12 @@
 import * as yup from 'yup';
 
-export const loginSchema = yup.object().shape({
+export const loginSchema = yup.object({
     username: yup
     .string()
-    .min(4)
-    .max(16)
+    .min(4, 'نام کاربری باید حداقل شش حرف داشته باشد')
+    .max(16 , 'نام کاربری بیشتر از ۱۶ حرف نمی‌تواند باشد')
     .matches(/^[a-zA-Z0-9]/, "نام کاربری باید با حروف شروع شود و شامل حروف و اعداد می‌شود")
-    .required('نام کاربری اجباری است'),
+    .required(),
 
     password: yup
     .string()
@@ -16,5 +16,5 @@ export const loginSchema = yup.object().shape({
     .matches(/[A-Z]/, 'رمز عبور باید حداقل یک حرف بزرگ داشته باشد')
     .matches(/[0-9]/, 'رمز عبور باید حداقل یک عدد داشته باشد')
     .matches(/[!@#%^&*(),.?":{}|<>]/, 'رمز عبور باید حداقل یک کاراکتر خاص داشته باشد') 
-    .required('رمز عبور را باید وارد کنید'),
+    .required(),
 })
