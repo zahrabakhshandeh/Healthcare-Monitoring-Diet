@@ -1,7 +1,7 @@
 "use client";
 import { TInput } from "@/types";
 import React, { ChangeEvent, forwardRef } from "react";
-import { InputHTMLAttributes, ReactNode, useCallback, useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import OpenEyeICon from "/public/eye.svg";
 import CloseEyeICon from "/public/eye-slash.svg";
 
