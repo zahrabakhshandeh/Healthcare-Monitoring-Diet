@@ -27,3 +27,8 @@ export type SignUpDataType = {
   passagain: string;
   email: string;
 };
+
+export type LoginDataType = {
+  username: string;
+  pass: string;
+};
