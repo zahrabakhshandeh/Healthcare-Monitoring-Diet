@@ -6,14 +6,8 @@ import PasswordKey from "/public/passwordkey.svg";
 import Link from "next/link";
 import MainButton from "@/components/MainButton";
 import LoginIcon from "/public/login-white.svg";
-import useLogin, {
-  loginSchema,
-} from "../../../../validation/loginValidation/useLogin";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { Controller, useForm } from "react-hook-form";
-import "react-toastify/dist/ReactToastify.css";
-import { LoginDataType } from "@/types";
-import { toast } from "react-toastify";
+import useLogin from "../../../../validation/loginValidation/useLogin"
+import { Controller, useForm } from "react-hook-form"
 
 const FormLogin = () => {
   const { control, handelValueInputs, handleSubmit } = useLogin();
