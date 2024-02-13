@@ -9,58 +9,58 @@ import ID from "/public/id.svg";
 import { yupResolver } from "@hookform/resolvers/yup";
 import SignUp from "/public/signup-white.svg";
 import { useEffect, useRef } from "react";
-import {SignUpSchema} from "../../../../validation/signupValidation/useRegister";
+import useRegister from "../../../../validation/signupValidation/useRegister";
 import { Controller, useForm } from "react-hook-form";
+import { SignUpDataType } from "@/types";
+import { toast } from "react-toastify";
 
 const FormRegister = () => {
+  const userIdRef = useRef<HTMLInputElement | null>(null);
+  const usernameRef = useRef<HTMLInputElement | null>(null);
+  const passwordRef = useRef<HTMLInputElement | null>(null);
+  const passwordAgainRef = useRef<HTMLInputElement | null>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
 
-  const userIdRef = useRef<HTMLInputElement| null>(null);
-  const usernameRef = useRef<HTMLInputElement| null>(null);
-  const passwordRef = useRef<HTMLInputElement| null>(null);
-  const passwordAgainRef = useRef<HTMLInputElement| null>(null);
-  const emailRef = useRef<HTMLInputElement| null>(null);
-
-  
-  const inputRefs = [userIdRef, usernameRef, passwordRef, passwordAgainRef, emailRef];
+  const inputRefs = [
+    userIdRef,
+    usernameRef,
+    passwordRef,
+    passwordAgainRef,
+    emailRef,
+  ];
 
   const handleEnter = (event: React.KeyboardEvent<HTMLFormElement>) => {
-    if(event.key === 'Enter'){
-      for(let i = 0; i < inputRefs.length; i++){
-        if (document.activeElement === inputRefs[i].current){
-          if(inputRefs[i+1]?.current){
-            inputRefs[i+1].current?.focus();
+    if (event.key === "Enter") {
+      for (let i = 0; i < inputRefs.length; i++) {
+        if (document.activeElement === inputRefs[i].current) {
+          if (inputRefs[i + 1]?.current) {
+            inputRefs[i + 1].current?.focus();
             event.preventDefault();
           }
           break;
-        } 
+        }
       }
     }
-  }
-  
-  const { control, handleSubmit, formState: { errors } } = useForm({
-    resolver: yupResolver(SignUpSchema),
-  });
-
-  const onSubmit = (data: any) => {
-    console.log(data);
   };
+
+  const { control, errors, handelValueInputs, handleSubmit, register } =
+    useRegister();
 
   useEffect(() => {
     userIdRef.current?.focus();
   }, []);
 
-
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handelValueInputs)}
       onKeyDown={handleEnter}
       className="flex w-full flex-col gap-4"
     >
       <Controller
-          control={control}
-          name="userID"
-          render={({ field }) => (
-            <MainInput
+        control={control}
+        name="userid"
+        render={({ field }) => (
+          <MainInput
             type="text"
             className="w-full"
             firstIconSrc={ID}
@@ -68,76 +68,83 @@ const FormRegister = () => {
             {...field}
             ref={userIdRef}
           />
-          )}
-        />
-        {errors.userID && <p className='text-[var(--red)]'>{errors.userID.message}</p>}
-        
+        )}
+      />
+      {errors.userid && (
+        <p className="text-[var(--red)]">{errors.userid.message}</p>
+      )}
 
-        <Controller
-          control={control}
-          name="username"
-          render={({ field }) => (
-            <MainInput
-              className="w-full"
-              type="text"
-              firstIconSrc={UserProfile}
-              placeholder="نام و نام خانوادگی"
-              {...field}
-              ref={usernameRef}
-            />
-          )}
-        />
-        {errors.username && <p className='text-[var(--red)]'>{errors.username.message}</p>}
-      
-        <Controller
-          control={control}
-          name="password"
-          render={({ field }) => (
-            <MainInput
-              type="password"
-              className="w-full"
-              firstIconSrc={PasswordKey}
-              placeholder="رمز عبور"
-              {...field}
-              ref={passwordRef}
-            />
-          )}
-        />
-        {errors.password && <p className='text-[var(--red)]'>{errors.password.message}</p>}
-      
+      <Controller
+        control={control}
+        name="username"
+        render={({ field }) => (
+          <MainInput
+            className="w-full"
+            type="text"
+            firstIconSrc={UserProfile}
+            placeholder="نام و نام خانوادگی"
+            {...field}
+            ref={usernameRef}
+          />
+        )}
+      />
+      {errors.username && (
+        <p className="text-[var(--red)]">{errors.username.message}</p>
+      )}
 
-        <Controller
-          control={control}
-          name="passwordCheck"
-          render={({ field }) => (
-            <MainInput
-              type="password"
-              className="w-full"
-              firstIconSrc={PasswordKey}
-              placeholder="رمز عبور"
-              {...field}
-              ref={passwordAgainRef}
-            />
-          )}
-        />
-        {errors.passwordCheck && <p className='text-[var(--red)]'>{errors.passwordCheck.message}</p>}
+      <Controller
+        control={control}
+        name="pass"
+        render={({ field }) => (
+          <MainInput
+            type="password"
+            className="w-full"
+            firstIconSrc={PasswordKey}
+            placeholder="رمز عبور"
+            {...field}
+            ref={passwordRef}
+          />
+        )}
+      />
+      {errors.pass && (
+        <p className="text-[var(--red)]">{errors.pass.message}</p>
+      )}
 
+      <Controller
+        control={control}
+        name="passagain"
+        render={({ field }) => (
+          <MainInput
+            type="password"
+            className="w-full"
+            firstIconSrc={PasswordKey}
+            placeholder="رمز عبور"
+            {...field}
+            ref={passwordAgainRef}
+          />
+        )}
+      />
+      {errors.passagain && (
+        <p className="text-[var(--red)]">{errors.passagain.message}</p>
+      )}
 
-        <Controller
-          control={control}
-          name="email"
-          render={({ field }) => (
-            <MainInput
-              className="w-full"
-              type="email"
-              firstIconSrc={Email}
-              placeholder="ایمیل"
-              {...field}
-              ref={emailRef}
-            />
-          )}
-        />
-        {errors.email && <p className='text-[var(--red)]'>{errors.email.message}</p>}
+      <Controller
+        control={control}
+        name="email"
+        render={({ field }) => (
+          <MainInput
+            className="w-full"
+            type="email"
+            firstIconSrc={Email}
+            placeholder="ایمیل"
+            {...field}
+            ref={emailRef}
+          />
+        )}
+      />
+      {errors.email && (
+        <p className="text-[var(--red)]">{errors.email.message}</p>
+      )}
 
       <section className="flex flex-row-reverse mt-[2.625rem] items-center justify-between">
         <MainButton
