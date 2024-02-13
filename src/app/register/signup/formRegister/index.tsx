@@ -6,13 +6,10 @@ import MainButton from "@/components/MainButton";
 import PasswordKey from "/public/passwordkey.svg";
 import Email from "/public/email.svg";
 import ID from "/public/id.svg";
-import { yupResolver } from "@hookform/resolvers/yup";
 import SignUp from "/public/signup-white.svg";
 import { useEffect, useRef } from "react";
 import useRegister from "../../../../validation/signupValidation/useRegister";
-import { Controller, useForm } from "react-hook-form";
-import { SignUpDataType } from "@/types";
-import { toast } from "react-toastify";
+import { Controller } from "react-hook-form";
 
 const FormRegister = () => {
   const userIdRef = useRef<HTMLInputElement | null>(null);
