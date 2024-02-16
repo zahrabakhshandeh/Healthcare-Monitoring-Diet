@@ -12,7 +12,7 @@ const MainInput = forwardRef<
   const [showPassword, setShowPassword] = React.useState(false);
 
   const checkFirstIcon = useCallback(() => {
-    if (props.firstIconSrc) return <props.firstIconSrc />;
+    if (props.firsticonsrc) return <props.firsticonsrc />;
   }, []);
 
   const eyeIconMemo = useCallback(() => {

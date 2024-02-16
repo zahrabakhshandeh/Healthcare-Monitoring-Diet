@@ -1,0 +1,44 @@
+# Query: firsticonsrc
+# ContextLines: 1
+
+10 results - 4 files
+
+src/app/register/login/formLogin/index.tsx:
+  50              <MainInput
+  51:               firsticonsrc={UserProfile}
+  52                className="w-full"
+
+  64              <MainInput
+  65:               firsticonsrc={PasswordKey}
+  66                type="password"
+
+src/app/register/signup/formRegister/index.tsx:
+   62              className="w-full"
+   63:             firsticonsrc={ID}
+   64              placeholder="کد ملی"
+
+   80              type="text"
+   81:             firsticonsrc={UserProfile}
+   82              placeholder="نام و نام خانوادگی"
+
+   98              className="w-full"
+   99:             firsticonsrc={PasswordKey}
+  100              placeholder="رمز عبور"
+
+  116              className="w-full"
+  117:             firsticonsrc={PasswordKey}
+  118              placeholder="رمز عبور"
+
+  134              type="email"
+  135:             firsticonsrc={Email}
+  136              placeholder="ایمیل"
+
+src/components/MainInput/index.tsx:
+  14    const checkFirstIcon = useCallback(() => {
+  15:     if (props.firsticonsrc) return <props.firsticonsrc />;
+  16    }, []);
+
+src/types/index.ts:
+  15    className?: string;
+  16:   firsticonsrc?: FunctionComponent;
+  17  };

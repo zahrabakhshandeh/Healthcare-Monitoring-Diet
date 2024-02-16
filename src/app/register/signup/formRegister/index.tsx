@@ -60,7 +60,7 @@ const FormRegister = () => {
           <MainInput
             type="text"
             className="w-full"
-            firstIconSrc={ID}
+            firsticonsrc={ID}
             placeholder="کد ملی"
             {...field}
             ref={userIdRef}
@@ -78,7 +78,7 @@ const FormRegister = () => {
           <MainInput
             className="w-full"
             type="text"
-            firstIconSrc={UserProfile}
+            firsticonsrc={UserProfile}
             placeholder="نام و نام خانوادگی"
             {...field}
             ref={usernameRef}
@@ -96,7 +96,7 @@ const FormRegister = () => {
           <MainInput
             type="password"
             className="w-full"
-            firstIconSrc={PasswordKey}
+            firsticonsrc={PasswordKey}
             placeholder="رمز عبور"
             {...field}
             ref={passwordRef}
@@ -114,7 +114,7 @@ const FormRegister = () => {
           <MainInput
             type="password"
             className="w-full"
-            firstIconSrc={PasswordKey}
+            firsticonsrc={PasswordKey}
             placeholder="رمز عبور"
             {...field}
             ref={passwordAgainRef}
@@ -132,7 +132,7 @@ const FormRegister = () => {
           <MainInput
             className="w-full"
             type="email"
-            firstIconSrc={Email}
+            firsticonsrc={Email}
             placeholder="ایمیل"
             {...field}
             ref={emailRef}

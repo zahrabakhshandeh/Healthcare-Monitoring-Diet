@@ -13,7 +13,7 @@ export type TButton = ButtonHTMLAttributes<HTMLButtonElement> & {
 export type TInput = InputHTMLAttributes<HTMLDivElement> & {
   register?: any;
   className?: string;
-  firstIconSrc?: FunctionComponent;
+  firsticonsrc?: FunctionComponent;
 };
 
 export interface ButtonPropsTypes {

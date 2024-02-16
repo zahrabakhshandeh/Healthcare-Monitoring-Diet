@@ -48,7 +48,7 @@ const FormLogin = () => {
           name="username"
           render={({ field }) => (
             <MainInput
-              firstIconSrc={UserProfile}
+              firsticonsrc={UserProfile}
               className="w-full"
               placeholder="نام کاربری"
               {...field}
@@ -62,7 +62,7 @@ const FormLogin = () => {
           name="pass"
           render={({ field }) => (
             <MainInput
-              firstIconSrc={PasswordKey}
+              firsticonsrc={PasswordKey}
               type="password"
               placeholder="رمز عبور"
               {...field}
