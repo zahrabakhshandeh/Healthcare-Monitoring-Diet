@@ -9,12 +9,11 @@ export default function Login() {
   return (
     <section>
       <Grid
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding:'4rem' }}
         container
         spacing={{ xs: 2, md: 0 }}
-        columns={{ xs: 2, sm: 2, md: 2, xl: 2 }}
-      >
-        <Grid xs={2} md={1} sm={2}>
+        columns={{ xs: 2, sm: 2, md: 2, xl: 2 }}>
+        <Grid item xs={2} md={1} sm={2}>
           <Box
             sx={{
               display: "flex",
@@ -78,7 +77,7 @@ export default function Login() {
             </div>
           </Box>
         </Grid>
-        <Grid xs={2} md={1} sm={2} sx={{ padding: "38px" }}>
+        <Grid item xs={2} md={1} sm={2} sx={{ padding: "38px" }}>
           <LoginArt />
         </Grid>
       </Grid>
