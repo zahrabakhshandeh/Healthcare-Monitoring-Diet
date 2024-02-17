@@ -9,7 +9,6 @@ import LoginIcon from "/public/login-white.svg";
 import {loginSchema} from '../../../../validation/loginValidation/useLogin'
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
-import 'react-toastify/dist/ReactToastify.css';
 
 
 const FormLogin = () => {
@@ -79,7 +78,7 @@ const FormLogin = () => {
         {errors.password && <p className='text-[var(--red)]'>{errors.password.message}</p>}
 
         <div className="flex flex-row gap-10 pt-7 items-center">
-          <Link href="/" className="text-[var(--primary-blue)]">
+          <Link href="/password-recovery" className="text-[var(--primary-blue)]">
             رمز عبورتون رو فراموش کردید؟
           </Link>
           <MainButton

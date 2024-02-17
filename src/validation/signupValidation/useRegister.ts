@@ -1,8 +1,8 @@
 import * as yup from "yup";
 
 export const SignUpSchema = yup.object({
-  userID: yup.string().min(10, 'کد ملی ۱۰ رقمی می باشد ').required('Required'),
-  username: yup.string(),
+  userID: yup.string().min(10, 'کد ملی ۱۰ رقمی می باشد ').required('کد ملی را وارد کنید'),
+  username: yup.string().required('نام و نام‌خانوادگی را وارد کنید'),
   password: yup.string()
   .min(8,'حداقل ۸ کارکتر وارد کنید')
   .max(16, 'رمز عبور باید تا ۱۶ کارکتر باشد')

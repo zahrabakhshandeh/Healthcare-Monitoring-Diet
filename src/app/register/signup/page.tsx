@@ -21,5 +21,4 @@ const SignUpPage = () => {
     </main>
   );
 };
-
 export default SignUpPage;

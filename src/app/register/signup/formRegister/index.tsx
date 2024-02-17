@@ -72,7 +72,6 @@ const FormRegister = () => {
         />
         {errors.userID && <p className='text-[var(--red)]'>{errors.userID.message}</p>}
         
-
         <Controller
           control={control}
           name="username"
@@ -105,7 +104,6 @@ const FormRegister = () => {
         />
         {errors.password && <p className='text-[var(--red)]'>{errors.password.message}</p>}
       
-
         <Controller
           control={control}
           name="passwordCheck"
@@ -121,7 +119,6 @@ const FormRegister = () => {
           )}
         />
         {errors.passwordCheck && <p className='text-[var(--red)]'>{errors.passwordCheck.message}</p>}
-
 
         <Controller
           control={control}
@@ -155,5 +152,4 @@ const FormRegister = () => {
     </form>
   );
 };
-
 export default FormRegister;

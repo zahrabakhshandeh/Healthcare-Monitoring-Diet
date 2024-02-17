@@ -9,7 +9,7 @@ const MainButton = (props: TButton) => {
   }, []);
 
   return (
-    <button
+    <button 
       className={`${props.className} font-semibold flex ${
         props.iconSrc && "gap-2"
       } items-center justify-center border-2 border-orange-200 shadow-sm drop-shadow bg-[var(--orange-color)] p-2 rounded-lg `}

@@ -51,9 +51,7 @@ export default function Login() {
                     ثبت نام{" "}
                   </Link>
                 </div>
-
                 <FormLogin />
-                
               </div>
             </div>
 
@@ -70,11 +68,20 @@ export default function Login() {
               </Typography>
               <hr className="border-[var(--orange-color)] border-2 w-40"></hr>
             </div>
-            <div className="flex justify-between mt-6 w-1/2">
-              <LoginByButton variant="apple" />
-              <LoginByButton />
-              <LoginByButton variant="google" />
-            </div>
+            <Grid sx={{ display: "flex", justifyContent: "center", padding:'2rem' }}
+              container
+              spacing={{ xs: 1, md: 2}}
+              columns={{ xs: 6}}>
+                <Grid item xs={1}>
+                  <LoginByButton variant="apple" />
+                </Grid>
+                <Grid item xs={1}>
+                  <LoginByButton />
+                </Grid>
+                <Grid item xs={1}>
+                  <LoginByButton variant="google" />
+                </Grid>
+            </Grid>
           </Box>
         </Grid>
         <Grid item xs={2} md={1} sm={2} sx={{ padding: "38px" }}>
