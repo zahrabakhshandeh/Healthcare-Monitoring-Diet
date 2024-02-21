@@ -9,13 +9,15 @@ const MainButton = (props: TButton) => {
   }, []);
 
   return (
-    <button 
-      className={`${props.className} font-semibold flex ${
+    <button
+      className={`${props.className} flex ${
         props.iconSrc && "gap-2"
-      } items-center justify-center border-2 border-orange-200 shadow-sm drop-shadow bg-[var(--orange-color)] p-2 rounded-lg `}
+      } items-center justify-center shadow-button drop-shadow-md bg-[var(--orange-color)] p-2 rounded-lg `}
     >
       {checkIcon()}
-      <span className="!text-white  text-lg ">{props.value}</span>
+      <span className="!text-white font-semibold  text-base ">
+        {props.value}
+      </span>
     </button>
   );
 };
