@@ -19,7 +19,7 @@ const MainInput = forwardRef<
     if (props.type === "password") {
       return (
         <div onClick={() => setShowPassword(!showPassword)}>
-          {showPassword ? <OpenEyeICon /> : <CloseEyeICon />}
+          {showPassword ? <CloseEyeICon /> : <OpenEyeICon />}
         </div>
       );
     }
