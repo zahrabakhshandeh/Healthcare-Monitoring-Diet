@@ -16,7 +16,7 @@ const LoginByButton: React.FC<ButtonPropsTypes> = ({variant}) => {
     const Logo = logoMap[variant || 'default'];
 
     return (
-        <button type="submit" className="bg-[var(--new-gray)] py-2.5 px-5 rounded-3xl shadow-md ">
+        <button type="submit" className=" rounded-full shadow-md ">
             <Logo />
         </button>
     );
