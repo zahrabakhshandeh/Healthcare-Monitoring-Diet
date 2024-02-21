@@ -1,0 +1,9 @@
+.loginbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 650px;
+    height: 632px;
+    background: #FFFF;
+    border-radius: 80px;
+}

@@ -71,13 +71,9 @@ const FormLogin = () => {
           )}
         />
 
-        <div className="flex flex-row gap-10 pt-7 items-center">
           <MainButton
-            iconSrc={LoginIcon}
-            className="w-44 font-bold"
             value={"ورود"}
           />
-        </div>
       </form>
     </>
   );

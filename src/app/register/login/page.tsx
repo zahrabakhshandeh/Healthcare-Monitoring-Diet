@@ -8,7 +8,9 @@ import LoginBox from "@/components/LoginBox"
 
 export default function Login() {
   return (
-    <LoginBox/> 
+    <section className="flex justify-center">
+      <LoginBox/> 
+    </section>
   );
 }
 
