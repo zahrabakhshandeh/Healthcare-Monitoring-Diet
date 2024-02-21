@@ -43,7 +43,6 @@ const useLogin = () => {
     resolver: yupResolver(loginSchema),
   });
 
-  const { push } = useRouter();
 
   const handelValueInputs = useCallback((data: LoginDataType) => {
     console.log(data);
