@@ -72,9 +72,6 @@ const FormLogin = () => {
         />
 
         <div className="flex flex-row gap-10 pt-7 items-center">
-          <Link href="/" className="text-[var(--primary-blue)]">
-            رمز عبورتون رو فراموش کردید؟
-          </Link>
           <MainButton
             iconSrc={LoginIcon}
             className="w-44 font-bold"
