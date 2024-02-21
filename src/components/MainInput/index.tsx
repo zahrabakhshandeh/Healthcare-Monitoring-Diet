@@ -24,17 +24,17 @@ const MainInput = forwardRef<
       );
     }
   }, [showPassword]);
-  
+
   return (
     <div
-      className={`flex rounded-2xl items-center shadow-sm drop-shadow bg-[var(--new-gray)] gap-2 p-2 px-4`}
+      className={`flex rounded-xl items-center shadow-[var(--shadow-input)] shadow-inner bg-[var(--new-gray)] gap-2 p-2 px-4`}
     >
       {checkFirstIcon()}
       <input
         {...props.register}
         {...props}
         ref={ref}
-        className="outline-none w-full placeholder:text-sm bg-transparent border-none"
+        className="outline-none placeholder:text-[var(--second-gray)] w-full placeholder:text-sm bg-transparent border-none"
         type={showPassword ? "text" : props.type}
       />
       {eyeIconMemo()}
