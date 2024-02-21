@@ -8,7 +8,9 @@
   --black: #0f0f0f;
   --orange-color: #ffa45a;
   --second-white: #f1f1f1;
-  --new-gray: #f9f8f4;
+  --new-gray: #F3F4F6;
+  --second-gray:rgba(70, 72, 188, 0.3);
+  --shadow-input:rgba(70, 72, 188, 0.04);
   --red: #FF382D;
 }
 
