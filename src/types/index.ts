@@ -21,14 +21,14 @@ export interface ButtonPropsTypes {
 }
 
 export type SignUpDataType = {
-  userid: string;
+  userID: string;
   username: string;
-  pass: string;
-  passagain: string;
+  password: string;
+  passwordCheck: string;
   email: string;
 };
 
 export type LoginDataType = {
   username: string;
-  pass: string;
+  password: string;
 };
