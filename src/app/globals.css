@@ -13,6 +13,8 @@
   --second-gray: rgba(70, 72, 188, 0.3);
   --shadow-input: rgba(70, 72, 188, 0.04);
   --red: #ff382d;
+  --hr-gray: #F1F1F1;
+  --link-blue: #4648BC;
 }
 
 @media (prefers-color-scheme: dark) {

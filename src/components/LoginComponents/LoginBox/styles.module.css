@@ -6,4 +6,6 @@
     background: #FFFF;
     border-radius: 80px;
     padding: 59px 64px ;
+    gap: 24px;
+    max-height: 632;
 }

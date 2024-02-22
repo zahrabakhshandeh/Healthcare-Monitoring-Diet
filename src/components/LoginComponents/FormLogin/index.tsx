@@ -39,7 +39,7 @@ const FormLogin = () => {
     <>
       <form
         action=""
-        className="flex w-full flex-col gap-4"
+        className="flex w-full flex-col gap-6"
         onSubmit={handleSubmit(handelValueInputs)}
         onKeyDown={handleEnter}
       >
@@ -47,7 +47,7 @@ const FormLogin = () => {
           control={control}
           name="username"
           render={({ field }) => (
-            <MainInput
+            <MainInput 
               firsticonsrc={UserProfile}
               className="w-full"
               placeholder="نام کاربری"
@@ -70,7 +70,6 @@ const FormLogin = () => {
             />
           )}
         />
-
           <MainButton
             value={"ورود"}
           />

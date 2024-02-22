@@ -6,16 +6,23 @@ import styles from "./styles.module.css"
 const LoginBox = () => {
     return(
         <div className={styles.loginbox}>
-            <h3>ورود | ثبت نام</h3>
-            <div className="flex gap-8">
-                <span className="text-xs">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
-                <Link href="/"> ثبت نام </Link>
+            <h3 className="text-base font-semibold">ورود | ثبت نام</h3>
+            <div className="flex gap-40 ">
+                <span className="text-base">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
+                <Link className="text-[var(--link-blue)] text-lg" href="/"> ثبت نام </Link>
             </div>
             <FormLogin />
-            <Link href="">رمز عبورتون رو فراموش کردید؟</Link>
-            <LoginByButton variant="GoogleLogo"/>  
-            <LoginByButton />               
-            <LoginByButton variant="AppleLogo"/>                            
+            <Link href="" className="text-[var(--link-blue)]">رمز عبورتون رو فراموش کردید؟</Link>
+            <div className="flex flex-row gap-4 justify-center items-center">
+                <hr className="border-[var(--hr-gray)] w-40"></hr>                
+                <p>ورود با</p>
+                <hr className="border-[var(--hr-gray)] w-40"></hr>                
+            </div>
+            <div className="flex gap-8 justify-center">
+                <LoginByButton />
+                <LoginByButton />
+                <LoginByButton />
+            </div>
         </div>
     )
 };
