@@ -1,6 +1,6 @@
-import React from 'react'
 import Link from "next/link";
 import FormLogin from "@/components/LoginComponents/FormLogin";
+import LoginByButton from "@/components/LoginComponents/LoginOptiontsButton"
 import styles from "./styles.module.css" 
 
 const LoginBox = () => {
@@ -11,7 +11,11 @@ const LoginBox = () => {
                 <span className="text-xs">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
                 <Link href="/"> ثبت نام </Link>
             </div>
-            <FormLogin />               
+            <FormLogin />
+            <Link href="">رمز عبورتون رو فراموش کردید؟</Link>
+            <LoginByButton variant="GoogleLogo"/>  
+            <LoginByButton />               
+            <LoginByButton variant="AppleLogo"/>                            
         </div>
     )
 };

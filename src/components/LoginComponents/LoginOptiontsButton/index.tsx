@@ -1,3 +1,4 @@
+
 import React, { FunctionComponent, ReactNode, useCallback} from "react";
 import GoogleLogo from "/public/google.svg";
 import FaceBookLogo from "/public/facebook.svg";
@@ -12,11 +13,11 @@ const logoMap: { [key: string]: FunctionComponent } = {
 };
 
 const LoginByButton: React.FC<ButtonPropsTypes> = ({variant}) => {
-
+    
     const Logo = logoMap[variant || 'default'];
 
     return (
-        <button type="submit" className=" rounded-full shadow-md ">
+        <button type="submit" className="bg-[var(--new-gray)] py-2.5 px-5 rounded-3xl shadow-md ">
             <Logo />
         </button>
     );
