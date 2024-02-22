@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import FormLogin from "@/components/FormLogin";
+import FormLogin from "@/components/LoginComponents/FormLogin";
 import styles from "./styles.module.css" 
 
 const LoginBox = () => {

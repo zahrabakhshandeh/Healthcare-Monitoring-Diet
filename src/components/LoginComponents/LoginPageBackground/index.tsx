@@ -1,8 +1,8 @@
-import styles from "module";
+import styles from "./styles.module.css";
 
 const BlueBackground = () => {
     return(
-        <div>
+        <div className={styles.background }>
         </div>
     )
 };
