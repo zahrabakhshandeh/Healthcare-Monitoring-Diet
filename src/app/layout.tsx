@@ -1,4 +1,4 @@
-import { Inter, Roboto } from "@next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "/src/app/globals.css";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";

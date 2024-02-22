@@ -7,16 +7,15 @@ import FormLogin from "@/components/LoginComponents/formLogin";
 import LoginBox from "@/components/LoginComponents/LoginBox";
 import BlueBackground from "@/components/LoginComponents/LoginPageBackground/index.tsx"
 
-
 export default function Login() {
   return (
-    <section className="flex justify-center bg-slate-100">
+    <section className="flex justify-end bg-[var(--hr-gray)]">
       <div className="grid">
-        <div>
-          <BlueBackground />
+        <div className="flex items-center me-64">
           <LoginBox/> 
-        </div>
+        </div>  
       </div>
+      <BlueBackground />
     </section>
   );
 }

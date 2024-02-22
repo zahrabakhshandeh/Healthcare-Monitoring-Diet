@@ -1,11 +1,10 @@
 .loginbox {
+    z-index: 2;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 650px;
     background: #FFFF;
     border-radius: 80px;
     padding: 59px 64px ;
     gap: 24px;
-    max-height: 632;
+    position: absolute;
 }

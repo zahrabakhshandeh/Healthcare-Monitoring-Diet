@@ -9,7 +9,7 @@ const LoginBox = () => {
             <h3 className="text-base font-semibold">ورود | ثبت نام</h3>
             <div className="flex gap-40 ">
                 <span className="text-base">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
-                <Link className="text-[var(--link-blue)] text-lg" href="/"> ثبت نام </Link>
+                <Link className="text-[var(--link-blue)] text-lg" href="/register/signup"> ثبت نام </Link>
             </div>
             <FormLogin />
             <Link href="" className="text-[var(--link-blue)]">رمز عبورتون رو فراموش کردید؟</Link>
@@ -18,10 +18,10 @@ const LoginBox = () => {
                 <p>ورود با</p>
                 <hr className="border-[var(--hr-gray)] w-40"></hr>                
             </div>
-            <div className="flex gap-8 justify-center">
+            <div className="flex gap-12 justify-center">
+                <LoginByButton variant="google"/>
                 <LoginByButton />
-                <LoginByButton />
-                <LoginByButton />
+                <LoginByButton variant="apple" />
             </div>
         </div>
     )
