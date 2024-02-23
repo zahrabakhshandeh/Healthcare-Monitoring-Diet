@@ -1,23 +1,21 @@
+import React, { useRef } from "react";
+import LoginArt from "/public/login.svg";
+import Link from "next/link";
+import { Box, Grid, Typography } from "@mui/material";
+import LoginByButton from "@/components/LoginComponents/LoginOptiontsButton";
+import FormLogin from "@/components/LoginComponents/formLogin";
 import LoginBox from "@/components/LoginComponents/LoginBox";
-import BlueBackground from "@/components/LoginComponents/LoginPageBackground"
-import LoginArt from "/public/loginArt.svg"
+import BlueBackground from "@/components/LoginComponents/LoginPageBackground/index.tsx"
 
-
-const Login = () => {
+export default function Login() {
   return (
-    <section className="flex flex-row justify-end items-center bg-[var(--hr-gray)] ">
-      <BlueBackground />
-      <div className="grid grid-cols-2 z-10 absolute md:grid-cols-2 sm:grid-cols-1 ">
-        <div className="p-28">
+    <section className="flex justify-end bg-[var(--hr-gray)]">
+      <div className="grid">
+        <div className="flex items-center me-64">
           <LoginBox/> 
-        </div>
-        <div className="flex justify-center flex-col items-center">
-          <LoginArt/>
-          <span className="pt-16 text-[var(--hr-gray)] font-semibold text-base">سلامتی؛ انتخابی برای زندگی، نه تنها یک هدف.</span>
-          <span className="text-[var(--hr-gray)] font-semibold text-base"> از هر لقمه تا هر قدم، زندگی‌ات را با انتخاب‌های سالم رقم بزن.</span>
-        </div>
+        </div>  
       </div>
+      <BlueBackground />
     </section>
   );
-};
-export default Login;
+}

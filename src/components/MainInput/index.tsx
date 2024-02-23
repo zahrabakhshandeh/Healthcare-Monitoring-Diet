@@ -34,7 +34,7 @@ const MainInput = forwardRef<
         {...props.register}
         {...props}
         ref={ref}
-        className="h-12 outline-none placeholder:text-[var(--second-gray)] w-full placeholder:text-lg bg-transparent border-none"
+        className="h-9 outline-none placeholder:text-[var(--second-gray)] w-full placeholder:text-sm bg-transparent border-none"
         type={showPassword ? "text" : props.type}
       />
       {eyeIconMemo()}
