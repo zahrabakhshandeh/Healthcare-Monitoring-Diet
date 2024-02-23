@@ -8,9 +8,7 @@ const Login = () => {
     <section className="flex flex-row justify-end items-center bg-[var(--hr-gray)] ">
       <BlueBackground />
       <div className="grid grid-cols-2 z-10 absolute md:grid-cols-2 sm:grid-cols-1 ">
-        <div className="p-28">
           <LoginBox/> 
-        </div>
         <div className="flex justify-center flex-col items-center">
           <LoginArt/>
           <span className="pt-16 text-[var(--hr-gray)] font-semibold text-base">سلامتی؛ انتخابی برای زندگی، نه تنها یک هدف.</span>
