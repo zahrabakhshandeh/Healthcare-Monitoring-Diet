@@ -15,7 +15,7 @@ const MainButton = (props: TButton) => {
       } items-center justify-center shadow-button drop-shadow-md bg-[var(--orange-color)] p-2 rounded-lg h-12`}
     >
       {checkIcon()}
-      <span className="!text-white font-semibold  text-base ">
+      <span className="!text-white font-semibold  text-2xl ">
         {props.value}
       </span>
     </button>
