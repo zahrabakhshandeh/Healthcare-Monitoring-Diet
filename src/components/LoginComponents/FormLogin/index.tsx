@@ -3,10 +3,8 @@ import { useEffect, useRef } from "react";
 import MainInput from "@/components/MainInput";
 import UserProfile from "/public/profile-circle.svg";
 import PasswordKey from "/public/passwordkey.svg";
-import Link from "next/link";
 import MainButton from "@/components/MainButton";
-import LoginIcon from "/public/login-white.svg";
-import { Controller, useForm } from "react-hook-form";
+import { Controller} from "react-hook-form";
 import useLogin from "@/validation/loginValidation/useLogin";
 
 const FormLogin = () => {
@@ -39,7 +37,7 @@ const FormLogin = () => {
     <>
       <form
         action=""
-        className="flex w-full flex-col gap-6"
+        className="flex w-full flex-col gap-6 "
         onSubmit={handleSubmit(handelValueInputs)}
         onKeyDown={handleEnter}
       >
@@ -70,7 +68,7 @@ const FormLogin = () => {
             />
           )}
         />
-          <MainButton
+          <MainButton className="h-16"
             value={"ورود"}
           />
       </form>
