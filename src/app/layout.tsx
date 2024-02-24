@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <ToastContainer transition={Zoom} autoClose={2500} rtl={true} position="top-left" />
+        <ToastContainer transition={Zoom} autoClose={2500} rtl={true} position="top-center" />
       </body>
     </html>
   );
