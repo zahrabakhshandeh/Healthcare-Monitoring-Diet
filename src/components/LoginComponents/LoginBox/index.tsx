@@ -20,9 +20,9 @@ const LoginBox = () => {
                 <hr className="border-[var(--hr-gray)] w-30"></hr>                
             </div>
             <div className="flex gap-12 pt-6 justify-center">
-                <LoginByButton variant="google"/>
-                <LoginByButton />
-                <LoginByButton variant="apple" />
+                <LoginByButton title="google-icon" variant="google"/>
+                <LoginByButton title="facebook-icon"/>
+                <LoginByButton title="apple-icon" variant="apple" />
             </div>
         </div>
     )
