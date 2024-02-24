@@ -27,7 +27,7 @@ const MainInput = forwardRef<
 
   return (
     <div
-      className={`flex rounded-xl items-center shadow-[var(--shadow-input)] shadow-inner bg-[var(--new-gray)] gap-2 p-2 px-4`}
+      className={`flex rounded-xl ${props.className} items-center shadow-[var(--shadow-input)] shadow-inner bg-[var(--new-gray)] gap-2 p-2 px-4`}
     >
       {checkFirstIcon()}
       <input
