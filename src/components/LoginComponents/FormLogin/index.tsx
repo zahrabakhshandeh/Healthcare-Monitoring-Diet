@@ -21,7 +21,7 @@ const FormLogin = () => {
     if(errors.password && !errors.username){
       passwordRef.current?.focus()
     }
-  }, [errors]);
+  }, [errors.username , errors.password]);
 
   const inputRefs = [usernameRef, passwordRef];
 
