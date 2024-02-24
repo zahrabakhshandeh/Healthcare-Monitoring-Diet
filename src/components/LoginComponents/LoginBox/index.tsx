@@ -7,7 +7,7 @@ const LoginBox = () => {
     return(
         <div className={`${styles.loginbox} m-7`}>
             <h3 className="text-base font-semibold">ورود | ثبت نام</h3>
-            <div className="flex gap-52">
+            <div className="flex gap-28">
                 <span className="text-base">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
                 <Link className="text-[var(--link-blue)] text-lg" href="/register/signup"> ثبت نام </Link>
             </div>
@@ -18,7 +18,7 @@ const LoginBox = () => {
                 <p className="font-semibold text-xl">ورود با</p>
                 <hr className="border-[var(--hr-gray)] w-40"></hr>                
             </div>
-            <div className="flex gap-12 pt-10 justify-center">
+            <div className="flex gap-12 pt-6 justify-center">
                 <LoginByButton variant="google"/>
                 <LoginByButton />
                 <LoginByButton variant="apple" />

@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <section className="flex flex-row justify-end items-center bg-[var(--hr-gray)] ">
       <BlueBackground />
-      <div className="grid grid-cols-2 z-10 absolute md:grid-cols-2 sm:grid-cols-1 ">
+      <div className="grid grid-cols-2 z-10 absolute space-x-28 md:grid-cols-2 sm:grid-cols-1 ">
           <LoginBox/> 
         <div className="flex justify-center flex-col items-center">
           <LoginArt/>
