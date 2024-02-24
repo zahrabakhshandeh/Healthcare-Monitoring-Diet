@@ -1,9 +1,12 @@
 .background {
-    /* display: flex; */
     position: relative;
     z-index: 1;
     width: 75vw;
     height: 100vh;
     background-color: #4648BC;
     border-radius: 0 50px 50px 0;
+}
+
+@media and screen (max-width:850px){
+    display:hidden;
 }

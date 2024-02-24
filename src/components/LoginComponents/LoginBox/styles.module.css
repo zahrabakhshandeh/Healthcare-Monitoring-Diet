@@ -8,3 +8,41 @@
     gap: 1.5rem;
     transform: scale(0.7); 
 }
+@media screen and (max-width:770px ) {
+    .loginbox{
+        display: flex;
+        flex-direction: column;
+        max-width: 60rem;
+        background: #FFFF;
+        border-radius: 5rem;
+        padding: 4.6rem 4.4rem ;
+        gap: 1.5rem;
+        transform: scale(1);     
+    }
+}
+
+@media screen and (max-width:750px ) {
+    .loginbox{
+        display: flex;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        max-width: 45rem;
+        gap: 1.5rem;
+        transform: scale(1.2);
+    }
+}
+
+
+@media screen and (max-width:320px ) {
+    .loginbox{
+        display: flex;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        max-width: 45rem;
+        gap: 1.5rem;
+        transform: scale(1.2);
+    }
+
+}
