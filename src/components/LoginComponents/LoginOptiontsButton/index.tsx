@@ -11,12 +11,12 @@ const logoMap: { [key: string]: FunctionComponent } = {
     default: FaceBookLogo,
 };
 
-const LoginByButton: React.FC<ButtonPropsTypes> = ({variant}) => {
+const LoginByButton: React.FC<ButtonPropsTypes> = ({variant , title}) => {
 
     const Logo = logoMap[variant || 'default'];
 
     return (
-        <button type="submit" className=" rounded-full shadow-md ">
+        <button title={title} type="submit" className="rounded-full shadow-md ">
             <Logo />
         </button>
     );
