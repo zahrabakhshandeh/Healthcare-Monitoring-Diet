@@ -28,6 +28,7 @@ const nextConfig = {
     
         return config
       },
+      reactStrictMode: false,
 };
 
 
