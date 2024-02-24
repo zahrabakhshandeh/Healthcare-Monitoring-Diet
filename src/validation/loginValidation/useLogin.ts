@@ -6,7 +6,7 @@ import { useCallback } from "react";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export const loginSchema = yup.object({
   username: yup
@@ -21,18 +21,15 @@ export const loginSchema = yup.object({
 
   password: yup
     .string()
-    .min(8, "")
-    .max(16, "")
-    .matches(/[a-z]/, "رمز عبور باید حداقل یک حرف کوچک داشته باشد")
-    .matches(/[A-Z]/, "رمز عبور باید حداقل یک حرف بزرگ داشته باشد")
-    .matches(/[0-9]/, "رمز عبور باید حداقل یک عدد داشته باشد")
+    .min(8, "رمز عبور باید حداقل دارای ۸ کاراکتر باشد")
+    .max(16, "رمز عبور باید حداکثر دارای ۱۶ کاراکتر باشد")
     .matches(
-      /[!@#%^&*(),.?":{}|<>]/,
-      "رمز عبور باید حداقل یک کاراکتر خاص داشته باشد"
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/,
+      "رمز عبور باید دارای حرف بزرگ و عدد باشد"
     )
     .required("رمز عبور را وارد کنید"),
 });
-
+let count = 0;
 const useLogin = () => {
   const {
     control,
@@ -42,10 +39,20 @@ const useLogin = () => {
   } = useForm<LoginDataType>({
     resolver: yupResolver(loginSchema),
   });
-
-
+  console.log(count++);
+  if (errors.username) {
+    console.log("error");
+    toast.error(errors.username.message);
+  }
+  if (!errors.username && errors.password) {
+    console.log("error");
+    toast.error(errors.password.message);
+  }
+  const { push } = useRouter();
   const handelValueInputs = useCallback((data: LoginDataType) => {
     console.log(data);
+    push("/");
+    toast.success("خوش آمدید");
   }, []);
 
   return {
