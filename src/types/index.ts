@@ -18,6 +18,7 @@ export type TInput = InputHTMLAttributes<HTMLDivElement> & {
 
 export interface ButtonPropsTypes {
   variant?: "google" | "apple";
+  title:string
 }
 
 export type SignUpDataType = {
