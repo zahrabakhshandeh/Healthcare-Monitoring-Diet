@@ -63,7 +63,13 @@ const FormRegister = () => {
     if (errors.email) {
       emailRef.current?.focus();
     }
-  }, [errors]);
+  }, [
+    errors.password,
+    errors.passwordCheck,
+    errors.email,
+    errors.userID,
+    errors.username,
+  ]);
 
   return (
     <form
