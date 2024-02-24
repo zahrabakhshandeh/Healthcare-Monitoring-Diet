@@ -44,5 +44,17 @@
         gap: 1.5rem;
         transform: scale(1.2);
     }
+}
 
+@media screen and (min-width:1920px ) {
+    .loginbox{
+        display: flex;
+        flex-direction: column;
+        max-width: 40.62rem;
+        background: #FFFF;
+        border-radius: 5rem;
+        padding: 3.6rem 4rem ;
+        gap: 1.5rem;
+        transform: scale(.8); 
+    }
 }

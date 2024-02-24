@@ -6,7 +6,3 @@
     background-color: #4648BC;
     border-radius: 0 50px 50px 0;
 }
-
-@media and screen (max-width:850px){
-    display:hidden;
-}

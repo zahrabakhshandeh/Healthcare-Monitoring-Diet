@@ -5,14 +5,15 @@ import styles from "./styles.module.css"
 
 const LoginBox = () => {
     return(
-        <div className={`${styles.loginbox} xl:m-7 sm:m-1 sm:scale-150 md:scale-105 sm:max-sm:scale-150`}>
+        <div className={`${styles.loginbox} xl:m-7 sm:m-1 sm:scale-150 sm:max-sm:scale-150 md:scale-75 xl:scale-100`}>
             <h3 className="text-base font-semibold">ورود | ثبت نام</h3>
-            <div className="flex md:gap-40 gap-8">
-                <span className="sm:text-base text-xs">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
+
+            <div className="flex lg:gap-40 sm:max-md:gap-10 gap-2">
+                <p className="sm:text-base text-xs">لطفا نام کاربری و رمز عبور خود را وارد کنید</p>
                 <Link className="text-[var(--link-blue)] sm:text-base text-xs" href="/register/signup"> ثبت نام </Link>
             </div>
             <FormLogin />
-            <Link href="" className="text-[var(--link-blue)] text-xs sm:text-lg md:text-lg sm:text-sm">رمز عبورتون رو فراموش کردید؟</Link>
+            <Link href="" className="text-[var(--link-blue)] text-xs md:text-lg sm:text-sm">رمز عبورتون رو فراموش کردید؟</Link>
             <div className="flex flex-row gap-1 justify-center items-center">
                 <hr className="border-[var(--hr-gray)] w-30"></hr>                
                 <p className="font-semibold lg:text-xl sm:text-lg text-xs">ورود با</p>
