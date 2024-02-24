@@ -68,7 +68,7 @@ const FormLogin = () => {
             <MainInput
               firsticonsrc={PasswordKey}
               type="password"
-              className={`${errors.password && 'border border-red-600'}`}
+              className={`${(errors.password && !errors.username)&& 'border border-red-600'}`}
               placeholder="رمز عبور"
               {...field}
               ref={passwordRef}
