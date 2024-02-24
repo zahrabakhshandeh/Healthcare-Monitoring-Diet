@@ -8,14 +8,20 @@ import { Controller} from "react-hook-form";
 import useLogin from "@/validation/loginValidation/useLogin";
 
 const FormLogin = () => {
-  const { control, handelValueInputs, handleSubmit } = useLogin();
+  const { control, handelValueInputs,errors, handleSubmit } = useLogin();
 
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     usernameRef.current?.focus();
-  }, []);
+    if(errors.username){
+      usernameRef.current?.focus()
+    }
+    if(errors.password && !errors.username){
+      passwordRef.current?.focus()
+    }
+  }, [errors]);
 
   const inputRefs = [usernameRef, passwordRef];
 
@@ -47,7 +53,7 @@ const FormLogin = () => {
           render={({ field }) => (
             <MainInput 
               firsticonsrc={UserProfile}
-              className="w-full"
+              className={`w-full ${errors.username && 'border border-red-600'}`}
               placeholder="نام کاربری"
               {...field}
               ref={usernameRef}
@@ -62,6 +68,7 @@ const FormLogin = () => {
             <MainInput
               firsticonsrc={PasswordKey}
               type="password"
+              className={`${errors.password && 'border border-red-600'}`}
               placeholder="رمز عبور"
               {...field}
               ref={passwordRef}
