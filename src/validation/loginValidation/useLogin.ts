@@ -27,7 +27,6 @@ export const loginSchema = yup.object({
     )
     .required("رمز عبور را وارد کنید"),
 });
-let count = 0;
 const useLogin = () => {
   const {
     control,
@@ -37,7 +36,6 @@ const useLogin = () => {
   } = useForm<LoginDataType>({
     resolver: yupResolver(loginSchema),
   });
-  console.log(count++);
   if (errors.username) {
     console.log("error");
     toast.error(errors.username.message);
