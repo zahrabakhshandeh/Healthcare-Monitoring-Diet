@@ -5,9 +5,9 @@ import styles from "./styles.module.css"
 
 const LoginBox = () => {
     return(
-        <div className={`${styles.loginbox} m-7`}>
+        <div className={`${styles.loginbox} xl:m-7 sm:m-1 sm:scale-105`}>
             <h3 className="text-base font-semibold">ورود | ثبت نام</h3>
-            <div className="flex gap-28">
+            <div className="flex gap-40">
                 <span className="text-base">لطفا نام کاربری و رمز عبور خود را وارد کنید</span>
                 <Link className="text-[var(--link-blue)] text-lg" href="/register/signup"> ثبت نام </Link>
             </div>

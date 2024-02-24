@@ -1,5 +1,5 @@
 .background {
-    display: flex;
+    /* display: flex; */
     position: relative;
     z-index: 1;
     width: 75vw;
