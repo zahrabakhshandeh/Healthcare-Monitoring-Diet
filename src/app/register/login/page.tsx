@@ -16,7 +16,7 @@ const Login = () => {
           <LoginArt/>
           <div className="md:pt-10 flex flex-col items-center">
             <span className="xl:pt-16 text-[var(--hr-gray)] font-semibold xl:text-base">سلامتی؛ انتخابی برای زندگی، نه تنها یک هدف.</span>
-            <span className="text-[var(--hr-gray)] font-semibold text-base"> از هر لقمه تا هر قدم، زندگی‌ات را با انتخاب‌های سالم رقم بزن.</span>
+            <span className="text-[var(--hr-gray)]  font-semibold text-base"> از هر لقمه تا هر قدم، زندگی‌ات را با انتخاب‌های سالم رقم بزن.</span>
           </div>
         </div>
       </div>
