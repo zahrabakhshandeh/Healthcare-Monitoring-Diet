@@ -1,6 +1,5 @@
 "use client";
 import MainInput from "@/components/MainInput";
-import Link from "next/link";
 import UserProfile from "/public/profile-circle.svg";
 import MainButton from "@/components/MainButton";
 import PasswordKey from "/public/passwordkey.svg";
@@ -11,7 +10,7 @@ import SignUp from "/public/signup-white.svg";
 import { useEffect, useRef } from "react";
 import useRegister, {
   SignUpSchema,
-} from "../../../../validation/signupValidation/useRegister";
+} from "../../../validation/signupValidation/useRegister";
 import { Controller, useForm } from "react-hook-form";
 
 const FormRegister = () => {
@@ -171,20 +170,12 @@ const FormRegister = () => {
           />
         )}
       />
-
-      <section className="flex flex-row-reverse mt-[2.625rem] items-center justify-between">
         <MainButton
           type="submit"
           className="w-52 "
           iconSrc={SignUp}
           value={"ثبت نام"}
         />
-        <Link href={"/register/login"}>
-          <p className="text-lg text-[var(--primary-blue)]">
-            قبلا ثبت نام کردید؟
-          </p>
-        </Link>
-      </section>
     </form>
   );
 };
