@@ -48,7 +48,22 @@ const FormRegister = () => {
 
   useEffect(() => {
     userIdRef.current?.focus();
-  }, []);
+    if (errors.userID) {
+      userIdRef.current?.focus();
+    }
+    if (errors.username) {
+      usernameRef.current?.focus();
+    }
+    if (errors.password) {
+      passwordRef.current?.focus();
+    }
+    if (errors.passwordCheck) {
+      passwordAgainRef.current?.focus();
+    }
+    if (errors.email) {
+      emailRef.current?.focus();
+    }
+  }, [errors]);
 
   return (
     <form
@@ -62,7 +77,7 @@ const FormRegister = () => {
         render={({ field }) => (
           <MainInput
             type="text"
-            className="w-full"
+            className={`w-full ${errors.userID && "border border-red-600"}`}
             firsticonsrc={ID}
             placeholder="کد ملی"
             {...field}
@@ -70,16 +85,15 @@ const FormRegister = () => {
           />
         )}
       />
-      {errors.userID && (
-        <p className="text-[var(--red)]">{errors.userID.message}</p>
-      )}
 
       <Controller
         control={control}
         name="username"
         render={({ field }) => (
           <MainInput
-            className="w-full"
+            className={`w-full ${
+              errors.username && !errors.userID && "border border-red-600"
+            }`}
             type="text"
             firsticonsrc={UserProfile}
             placeholder="نام و نام خانوادگی"
@@ -88,9 +102,6 @@ const FormRegister = () => {
           />
         )}
       />
-      {errors.username && (
-        <p className="text-[var(--red)]">{errors.username.message}</p>
-      )}
 
       <Controller
         control={control}
@@ -98,7 +109,12 @@ const FormRegister = () => {
         render={({ field }) => (
           <MainInput
             type="password"
-            className="w-full"
+            className={`w-full ${
+              errors.password &&
+              !errors.username &&
+              !errors.userID &&
+              "border border-red-600"
+            }`}
             firsticonsrc={PasswordKey}
             placeholder="رمز عبور"
             {...field}
@@ -106,9 +122,6 @@ const FormRegister = () => {
           />
         )}
       />
-      {errors.password && (
-        <p className="text-[var(--red)]">{errors.password.message}</p>
-      )}
 
       <Controller
         control={control}
@@ -116,7 +129,13 @@ const FormRegister = () => {
         render={({ field }) => (
           <MainInput
             type="password"
-            className="w-full"
+            className={`w-full ${
+              errors.passwordCheck &&
+              !errors.password &&
+              !errors.username &&
+              !errors.userID &&
+              "border border-red-600"
+            }`}
             firsticonsrc={PasswordKey}
             placeholder="رمز عبور"
             {...field}
@@ -124,17 +143,21 @@ const FormRegister = () => {
           />
         )}
       />
-      {errors.passwordCheck && (
-        <p className="text-[var(--red)]">{errors.passwordCheck.message}</p>
-      )}
 
       <Controller
         control={control}
         name="email"
         render={({ field }) => (
           <MainInput
-            className="w-full"
-            type="email"
+            className={`w-full ${
+              errors.email &&
+              !errors.password &&
+              !errors.passwordCheck &&
+              !errors.username &&
+              !errors.userID &&
+              "border border-red-600"
+            }`}
+            type="text"
             firsticonsrc={Email}
             placeholder="ایمیل"
             {...field}
@@ -142,9 +165,6 @@ const FormRegister = () => {
           />
         )}
       />
-      {errors.email && (
-        <p className="text-[var(--red)]">{errors.email.message}</p>
-      )}
 
       <section className="flex flex-row-reverse mt-[2.625rem] items-center justify-between">
         <MainButton
