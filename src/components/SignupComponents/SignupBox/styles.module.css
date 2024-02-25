@@ -1,4 +1,6 @@
 .SignupBox{
     display: flex;
-    justify: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 3.6rem;
 }

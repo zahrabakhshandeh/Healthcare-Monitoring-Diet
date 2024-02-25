@@ -1,19 +1,16 @@
 import FormRegister from '../formRegister';
 import Link from "next/link";
+import styles from "./styles.module.css"
 
 const SignupBox = () => {
     return(
-        <div>
+        <div className={styles.SignupBox}>
             <h2>ثبت نام </h2>
-            <div>
-                
+            <div className="flex flex-row">
+                <p>خودتون رو به ما معرفی کنید:</p>
+                <Link href={"/register/login"}> قبلا ثبت نام کردید؟ </Link>
             </div>
             <FormRegister />
-            <Link href={"/register/login"}>
-            <p className="text-lg text-[var(--primary-blue)]">
-                قبلا ثبت نام کردید؟
-            </p>
-            </Link>
         </div>
     )
 }
