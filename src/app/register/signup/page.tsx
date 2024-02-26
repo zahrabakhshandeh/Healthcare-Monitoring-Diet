@@ -10,7 +10,7 @@ const SignUpPage = () => {
       </div>
       <div className="flex justify-center flex-row lg:absolute lg:m-10 z-2 gap-32">
         <div className="flex flex-col items-center justify-center ms-14">
-          <div className="lg:flex justify-center items-center md:hidden">
+          <div className="lg:flex justify-center items-center md:hidden hidden">
               <SignUpArt />
           </div>
           <div className="md:pt-1 flex flex-col items-center">
