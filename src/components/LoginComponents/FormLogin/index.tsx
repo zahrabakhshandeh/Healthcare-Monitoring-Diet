@@ -75,7 +75,7 @@ const FormLogin = () => {
             />
           )}
         />
-          <MainButton className="h-16"
+          <MainButton className="h-16 bg-[var(--orange-color)]"
             value={"ورود"}
           />
       </form>
