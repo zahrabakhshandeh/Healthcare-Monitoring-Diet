@@ -3,8 +3,9 @@
     border-radius: 5rem;
     max-width: 667px;
     display: flex;
+    gap:1rem;
     flex-direction: column;
     justify-content: center;
-    padding: 3.6rem 6rem;
-    transform: scale(.8);
+    padding: 2.4rem 3.2rem;
+    transform: scale(.7);
 }
