@@ -8,7 +8,7 @@ const LoginBox = () => {
         <div className={`${styles.loginbox} xl:m-7 sm:m-1 sm:scale-150 sm:max-sm:scale-150 md:scale-75 xl:scale-100`}>
             <h3 className="text-base font-semibold">ورود | ثبت نام</h3>
 
-            <div className="flex lg:gap-40 sm:max-md:gap-10 gap-2">
+            <div className="flex lg:gap-40 lg:flex-row md:flex-col  md:gap-2 sm:max-md:gap-10 sm:gap-2 sm:flex-row flex-col gap-2">
                 <p className="sm:text-base text-xs">لطفا نام کاربری و رمز عبور خود را وارد کنید</p>
                 <Link className="text-[var(--link-blue)] sm:text-base text-xs" href="/register/signup"> ثبت نام </Link>
             </div>
