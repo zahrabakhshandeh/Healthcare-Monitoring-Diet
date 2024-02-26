@@ -1,6 +1,10 @@
 .SignupBox{
+    background-color: #ffff;
+    border-radius: 5rem;
+    max-width: 667px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 3.6rem;
+    padding: 3.6rem 6rem;
+    transform: scale(.8);
 }
