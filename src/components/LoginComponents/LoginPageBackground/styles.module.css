@@ -1,8 +1,7 @@
 .background {
-    position: relative;
-    z-index: 1;
-    width: 75vw;
-    height: 100vh;
-    background-color: #4648BC;
-    border-radius: 0 3.1rem 3.1rem 0;
+  z-index: 1;
+  width: 75vw;
+  height: 100vh;
+  background-color: #4648bc;
+  /* border-radius: 3.1rem 0 0 3.1rem; */
 }
