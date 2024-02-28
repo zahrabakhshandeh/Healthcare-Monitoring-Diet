@@ -15,7 +15,7 @@
   --red: #ff382d;
   --hr-gray: #F1F1F1;
   --link-blue: #4648BC;
-  --green-btn: #038062;
+  --green-btn: rgb(3, 128, 98);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,8 +49,14 @@ body {
   }
 }
 
-.shadow-button {
+.shadow-button-orange {
   box-shadow: 0px 4px 10px 0px rgba(255, 164, 90, 0.4);
   -webkit-box-shadow: 0px 4px 10px 0px rgba(255, 164, 90, 0.4);
   -moz-box-shadow: 0px 4px 10px 0px rgba(255, 164, 90, 0.4);
+}
+
+.shadow-button-green{
+  box-shadow: 0px 4px 10px 0px rgba(3, 128, 98 , 0.4);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(3, 128, 98 , 0.4);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(3, 128, 98 , 0.4);
 }
