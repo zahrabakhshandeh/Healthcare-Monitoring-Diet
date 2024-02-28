@@ -12,7 +12,7 @@ const MainButton = (props: TButton) => {
     <button
       className={`${props.className} flex  ${
         props.iconSrc && "gap-2"
-      } items-center justify-center shadow-button drop-shadow-md  p-2 rounded-lg h-12`}
+      } items-center justify-center  drop-shadow-md  p-2 rounded-lg h-12`}
     >
       {checkIcon()}
       <span className="!text-white font-semibold  text-2xl  ">
