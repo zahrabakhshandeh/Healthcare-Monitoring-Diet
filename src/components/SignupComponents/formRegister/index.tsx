@@ -49,17 +49,13 @@ const FormRegister = () => {
     userIdRef.current?.focus();
     if (errors.userID) {
       userIdRef.current?.focus();
-    }
-    if (errors.username) {
+    } else if (errors.username) {
       usernameRef.current?.focus();
-    }
-    if (errors.password) {
+    } else if (errors.password) {
       passwordRef.current?.focus();
-    }
-    if (errors.passwordCheck) {
+    } else if (errors.passwordCheck) {
       passwordAgainRef.current?.focus();
-    }
-    if (errors.email) {
+    } else if (errors.email) {
       emailRef.current?.focus();
     }
   }, [
@@ -170,12 +166,12 @@ const FormRegister = () => {
           />
         )}
       />
-        <MainButton
-          type="submit"
-          className="w-full h-16 bg-[var(--green-btn)] mb-8"
-          iconSrc={SignUp}
-          value={"ثبت نام"}
-        />
+      <MainButton
+        type="submit"
+        className="w-full h-16 bg-[var(--green-btn)] mb-8"
+        iconSrc={SignUp}
+        value={"ثبت نام"}
+      />
     </form>
   );
 };
