@@ -18,9 +18,9 @@ const SignUpPage = () => {
             </span>
           </div>
         </div>
-        <BlueBackground loginMode={false}/>
+        <BlueBackground loginMode={false} />
       </div>
-      <main className="">
+      <main className="w-full">
         <SignupBox />
       </main>
 
