@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-blue: #4648bc;
+  --back-ground-white: #fefefe;
+  --black: #0f0f0f;
+  --orange-color: #ffa45a;
+  --button-shadow: rgba(255, 164, 90, 0.4);
+  --second-white: #f1f1f1;
+  --new-gray: #f3f4f6;
+  --second-gray: rgba(70, 72, 188, 0.3);
+  --shadow-input: rgba(70, 72, 188, 0.04);
+  --red: #ff382d;
+  --hr-gray: #F1F1F1;
+  --link-blue: #4648BC;
+  --green-btn: rgb(3, 128, 98);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,18 +26,37 @@
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  color: var(--black);
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var;
+  background: var(--back-ground-white);
+  direction: rtl;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.shadow-button-orange {
+  box-shadow: 0px 4px 10px 0px rgba(255, 164, 90, 0.4);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(255, 164, 90, 0.4);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(255, 164, 90, 0.4);
+}
+
+.shadow-button-green{
+  box-shadow: 0px 4px 10px 0px rgba(3, 128, 98 , 0.4);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(3, 128, 98 , 0.4);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(3, 128, 98 , 0.4);
 }
