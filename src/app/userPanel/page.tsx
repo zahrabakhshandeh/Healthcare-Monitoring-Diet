@@ -6,28 +6,37 @@ import CalenderBox from "@/components/userPanelComponents/CalenderBox";
 const userPanel = () => {
     return(
         <main>
-            <div className = "grid lg:grid-cols-5 md:grid-cols-3 gap-4">
-                <div className="col-span-1 bg-[var(--primary-blue)] flex flex-col">
+            <div className = "grid lg:grid-cols-5 md:grid-cols-4 gap-4">
+
+                <div className="col-span-1 bg-[var(--primary-blue)] md:flex flex-col hidden">
                 </div>
-                <div className="lg:col-span-4 grid lg:grid-cols-4 md:grid-cols-2  grid-cols-1 md:col-span-2 col-span-1">
-                    <div className="flex justify-center gap-5 p-11">
+
+                <div className="lg:col-span-4 grid xl:grid-cols-4 md:grid-cols-2  grid-cols-1 md:col-span-4 col-span-2 sm:grid-cols-2 ">
+
+                    <div className="flex justify-center gap-5 sm:p-11 md:p-11 px-5 col-span-2 md:col-span-1">
                         <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
                     </div>
-                    <div className="flex justify-center gap-5 p-11">
+
+                    <div className="flex justify-center gap-5 md:p-11 px-5 col-span-2 md:col-span-1">
                         <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
                     </div>
-                    <div className="flex justify-center gap-5 p-11">
+
+                    <div className="flex justify-center gap-5 md:p-11 px-5 col-span-2 md:col-span-1">
                         <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
                     </div>
-                    <div className="flex justify-center gap-5 p-11">
+
+                    <div className="flex justify-center gap-5 md:p-11 px-5 col-span-2 md:col-span-1 ">
                         <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
                     </div>
-                    <div className="lg:col-span-3 col-span-1 md:col-span-2">
+
+                    <div className="xl:col-span-3 col-span-2 lg:col-span-2 md:col-span-2 ">
                         <MessageBox />
                     </div>
-                    <div className="lg:col-span-1 col-span-1 md:col-span-1">
+
+                    <div className="lg:col-span-2 col-span-2 md:col-span-1 xl:col-span-1">
                         <CalenderBox />
                     </div>
+
                 </div>
                 
             </div>
