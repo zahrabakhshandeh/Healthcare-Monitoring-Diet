@@ -10,29 +10,28 @@ const LoginBox = () => {
     >
       <h2 className="text-2xl font-semibold">ورود | ثبت نام</h2>
       <div
-        className="flex flex-col sm:flex-row gap-2 sm:justify-between text-[var(--link-blue)]
+        className="flex flex-col sm:flex-row gap-4 sm:justify-between text-[var(--link-blue)]
             "
       >
         <p className="lg:text-lg ">لطفا نام کاربری و رمز عبور خود را وارد</p>
         <Link href={"/register/signup"}>ثبت نام</Link>
       </div>
       <FormLogin />
-      <Link
-        href=""
-        className="text-[var(--link-blue)] text-xs md:text-lg sm:text-sm"
-      >
-        رمز عبورتون رو فراموش کردید؟
-      </Link>
-      <div className="flex flex-row gap-1 justify-center items-center">
-        <hr className="border-[var(--hr-gray)] w-30"></hr>
-        <p className="font-semibold lg:text-xl sm:text-lg text-xs">ورود با</p>
-        <hr className="border-[var(--hr-gray)] w-30"></hr>
-      </div>
-      <div className="flex gap-12 pt-6 justify-center">
-        <LoginByButton title="google-icon" variant="google" />
-        <LoginByButton title="facebook-icon" />
-        <LoginByButton title="apple-icon" variant="apple" />
-      </div>
+      <section className="flex flex-col mt-6 gap-4">
+        <Link href="" className="text-[var(--link-blue)]  text-base ">
+          رمز عبورتون رو فراموش کردید؟
+        </Link>
+        <div className="flex flex-row gap-1 justify-center items-center">
+          <hr className="border-[var(--hr-gray)] border w-full " />
+          <p className="font-semibold w-28 text-base">ورود با</p>
+          <hr className="border-[var(--hr-gray)] border w-full"></hr>
+        </div>
+        <div className="flex gap-12 pt-6 justify-center">
+          <LoginByButton title="google-icon" variant="google" />
+          <LoginByButton title="facebook-icon" />
+          <LoginByButton title="apple-icon" variant="apple" />
+        </div>
+      </section>
     </div>
     // <div className={`${styles.loginbox} xl:m-7 sm:m-1 `}>
     //     <h2 className="text-2xl  font-semibold">ورود | ثبت نام</h2>
