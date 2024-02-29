@@ -1,4 +1,4 @@
-import QuickLinkBoxTypes from "@/types/index";
+import {QuickLinkBoxTypes} from "@/types/index";
 import Link from "next/link";
 
 const QuickLinkBox = ({subject, bodyText, badgeLogo, badgeColor}:QuickLinkBoxTypes) => {
@@ -9,7 +9,11 @@ const QuickLinkBox = ({subject, bodyText, badgeLogo, badgeColor}:QuickLinkBoxTyp
                     <h1 className="text-xl ps-2">{subject}</h1>
                     <p className="text-sm px-2">{bodyText}</p>
                 </div>
-                <div className={`bottom-2/3 left-56 rounded-full flex justify-center items-center w-16 h-16 absolute bg-[var(--${badgeColor})] z-10`}>{badgeLogo} wh</div> 
+                <div className={`bottom-2/3 left-3/4 rounded-full flex justify-center items-center w-16 h-16 absolute bg-[var(--primary-blue)] z-10`}>
+                    <div>
+                        {badgeLogo}
+                    </div>
+                </div> 
             </div>
         </Link>
     )

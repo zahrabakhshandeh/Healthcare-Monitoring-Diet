@@ -1,8 +1,13 @@
 import {FunctionComponent,} from "react";
 
-export default interface QuickLinkBoxTypes {
-    subject:string, 
-    bodyText:string, 
+export interface QuickLinkBoxTypes {
+    subject:String, 
+    bodyText:String, 
     badgeLogo?:FunctionComponent|any,
     badgeColor?: String,
+}
+
+export interface MessageType{
+    type: String,
+    text: String
 }
