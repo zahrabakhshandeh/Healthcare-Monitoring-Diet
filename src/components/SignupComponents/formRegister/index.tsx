@@ -70,7 +70,7 @@ const FormRegister = () => {
     <form
       onSubmit={handleSubmit(handelValueInputs)}
       onKeyDown={handleEnter}
-      className="flex w-full flex-col gap-4"
+      className="flex md:grid lg:flex md:grid-cols-2 w-full flex-col gap-4"
     >
       <Controller
         control={control}
@@ -150,7 +150,7 @@ const FormRegister = () => {
         name="email"
         render={({ field }) => (
           <MainInput
-            className={`w-full ${
+            className={`w-full md:col-span-2 lg:col-span-1 ${
               errors.email &&
               !errors.password &&
               !errors.passwordCheck &&
@@ -168,7 +168,7 @@ const FormRegister = () => {
       />
       <MainButton
         type="submit"
-        className="w-full shadow-button-green h-16 bg-[var(--green-btn)]"
+        className="w-full md:col-span-2 lg:col-span-1 shadow-button-green h-16 bg-[var(--green-btn)]"
         iconSrc={SignUp}
         value={"ثبت نام"}
       />
