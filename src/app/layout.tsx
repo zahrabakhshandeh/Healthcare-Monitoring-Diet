@@ -10,7 +10,7 @@ export const metadata = {
 
 const yekanBakh = customFont({
   src: [{path:'./../../public/Fonts/YekanBakh-Regular.ttf'},
-  {path: './../../public/Fonts/YekanBakh-Bold.ttf'}]
+  {path: './../../public/Fonts/YekanBakh-Bold.ttf'}],
 })
 
 export default function RootLayout({
