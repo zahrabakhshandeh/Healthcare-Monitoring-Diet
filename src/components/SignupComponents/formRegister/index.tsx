@@ -168,7 +168,7 @@ const FormRegister = () => {
       />
       <MainButton
         type="submit"
-        className="w-full shadow-button-green h-16 bg-[var(--green-btn)] mb-8"
+        className="w-full shadow-button-green h-16 bg-[var(--green-btn)]"
         iconSrc={SignUp}
         value={"ثبت نام"}
       />
