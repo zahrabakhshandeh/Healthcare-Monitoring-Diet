@@ -18,9 +18,6 @@ const LoginBox = () => {
       </div>
       <FormLogin />
       <section className="flex flex-col mt-6 gap-4">
-        <Link href="" className="text-[var(--link-blue)]  text-base ">
-          رمز عبورتون رو فراموش کردید؟
-        </Link>
         <div className="flex flex-row gap-1 justify-center items-center">
           <hr className="border-[var(--hr-gray)] border w-full " />
           <p className="font-semibold w-28 text-base">ورود با</p>
