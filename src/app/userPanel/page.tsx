@@ -1,5 +1,6 @@
 import QuickLinkBox from "@/components/userPanelComponents/QuickLinkBox";
 import BadgeLogo from "/public/svg/Vector.svg"
+import MessageBox from "@/components/userPanelComponents/MessageBox";
 
 const userPanel = () => {
     return(
@@ -8,18 +9,21 @@ const userPanel = () => {
                 <div className="col-span-1 bg-[var(--primary-blue)] flex flex-col">
                 </div>
                 <div className="lg:col-span-4 grid lg:grid-cols-4 grid-cols-2 col-span-2">
-                <div className="flex justify-center gap-5 p-11">
-                     <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
-                </div>
-                <div className="flex justify-center gap-5 p-11">
-                     <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
-                </div>
-                <div className="flex justify-center gap-5 p-11">
-                     <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
-                </div>
-                <div className="flex justify-center gap-5 p-11">
-                     <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
-                </div>
+                    <div className="flex justify-center gap-5 p-11">
+                        <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
+                    </div>
+                    <div className="flex justify-center gap-5 p-11">
+                        <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
+                    </div>
+                    <div className="flex justify-center gap-5 p-11">
+                        <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
+                    </div>
+                    <div className="flex justify-center gap-5 p-11">
+                        <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
+                    </div>
+                    <div className="lg:col-span-3">
+                        <MessageBox />
+                    </div>
                 </div>
                 
             </div>
