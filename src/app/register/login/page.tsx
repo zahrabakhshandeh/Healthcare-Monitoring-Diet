@@ -9,14 +9,12 @@ const Login = () => {
         <LoginBox />
       </main>
       <div className="hidden lg:inline-block">
-        <div className="absolute flex flex-col gap-4 z-10 top-[15%] left-[10%]">
+        <div className="absolute flex flex-col gap-4 z-10 top-[15%] left-[8%]">
           <LoginArt />
           <div className=" relative bottom-0 flex flex-col items-center">
-            <span className="text-[var(--hr-gray)] font-semibold text-base">
-              سلامتی؛ انتخابی برای زندگی، نه تنها یک هدف.
-            </span>
-            <span className="text-[var(--hr-gray)]  font-semibold text-base">
-              از هر لقمه تا هر قدم، زندگی‌ات را با انتخاب‌های سالم رقم بزن.
+            <span className="text-white font-semibold w-3/5 text-center text-base">
+              سلامتی؛ انتخابی برای زندگی، نه تنها یک هدف. از هر لقمه تا هر قدم،
+              زندگی‌ات را با انتخاب‌های سالم رقم بزن.
             </span>
           </div>
         </div>
