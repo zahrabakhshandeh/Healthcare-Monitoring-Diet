@@ -5,7 +5,7 @@ const BlueBackground = (props: { loginMode: boolean }) => {
     <div
       className={`${styles.background} ${
         props.loginMode
-          ? "md:flex hidden rounded-s-[3.1rem]"
+          ? "lg:flex hidden left-0 rounded-e-none rounded-s-[3.1rem]"
           : "absolute right-0 rounded-e-[3.1rem] rounded-s-none lg:flex hidden"
       } `}
     ></div>
