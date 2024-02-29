@@ -4,7 +4,7 @@ import MessageArt from "/public/svg/messageBoxArt.svg";
 
 const MessageBox = () => {
     return(
-        <div className="bg-[var(--back-ground-white)] flex flex-col gap-2 shadow-md w-full mt-24 pt-24 ms-4 p-8 pb-2 rounded-2xl justify-center relative z-0 ">
+        <div className="bg-[var(--back-ground-white)] flex flex-col gap-2 shadow-md w-full mt-24 pt-24 mx-4 p-8 pb-2 rounded-2xl justify-center relative z-0 ">
 
             <div className="z-10 absolute -top-2 -right-4 flex items-center justify-center gap-4">
                 <div className="rounded-full bg-[var(--green-btn)] w-24 h-24 flex justify-center items-center  shadow-lg">
