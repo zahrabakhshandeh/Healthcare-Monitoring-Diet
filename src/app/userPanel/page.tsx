@@ -2,13 +2,15 @@ import QuickLinkBox from "@/components/userPanelComponents/QuickLinkBox";
 import BadgeLogo from "/public/svg/Vector.svg"
 import MessageBox from "@/components/userPanelComponents/MessageBox";
 import CalenderBox from "@/components/userPanelComponents/CalenderBox";
+import Sidebar from "@/components/userPanelComponents/Sidebar";
 
 const userPanel = () => {
     return(
         <main>
             <div className = "grid lg:grid-cols-5 md:grid-cols-4 gap-4">
 
-                <div className="col-span-1 bg-[var(--primary-blue)] md:flex flex-col hidden">
+                <div className="col-span-1 bg-[var(--primary-blue)] md:flex flex-col hidden justify-start p-10 items-center">
+                    <Sidebar />
                 </div>
 
                 <div className="lg:col-span-4 grid xl:grid-cols-4 md:grid-cols-2  grid-cols-1 md:col-span-4 col-span-2 sm:grid-cols-2 ">
