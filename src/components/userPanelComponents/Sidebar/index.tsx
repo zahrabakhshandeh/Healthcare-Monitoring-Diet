@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Profile from "../profile";
+import Profile from "../Profile";
 
 const Sidebar = () => {
     return(
-        <div className="flex flex-col text-white text-2xl gap-10 justify-center items-center">
+        <div className="flex flex-col text-white w-full bg-[var(--primary-blue)] text-xl gap-10 justify-start items-center xl:pt-11 h-screen">
             <Profile userName="نام‌کاربری"/>
             <ul className="flex gap-6 flex-col justify-center">
                <li>

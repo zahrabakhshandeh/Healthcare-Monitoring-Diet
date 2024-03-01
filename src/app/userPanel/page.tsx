@@ -9,7 +9,7 @@ const userPanel = () => {
         <main>
             <div className = "grid lg:grid-cols-5 md:grid-cols-4 gap-4 ">
 
-                <div className="col-span-1 bg-[var(--primary-blue)] md:flex flex-col hidden justify-start p-10 items-center lg:flex lg:justify-start -mb-7">
+                <div className="md:col-span-1 flex-col hidden justify-start pe-1 items-start lg:flex lg:justify-center">
                     <Sidebar />
                 </div>
 
