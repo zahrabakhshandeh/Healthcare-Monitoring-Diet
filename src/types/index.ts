@@ -11,3 +11,8 @@ export interface MessageType{
     type: String,
     text: String
 }
+
+export interface ProfileType{
+    avatar?: string|any,
+    userName: string
+}
