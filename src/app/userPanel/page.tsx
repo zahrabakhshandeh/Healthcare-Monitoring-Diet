@@ -15,7 +15,7 @@ const userPanel = () => {
 
                 <div className="lg:col-span-4 grid xl:grid-cols-4 md:grid-cols-2  grid-cols-1 md:col-span-4 col-span-2 sm:grid-cols-2 pt-10">
 
-                    <div className="flex justify-center gap-5 sm:p-11 md:p-11 px-5 col-span-2 md:col-span-1">
+                    <div className="flex justify-center gap-5 md:p-11 px-5 col-span-2 md:col-span-1">
                         <QuickLinkBox subject="تیتر" bodyText="متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح متن توضیح ."  badgeLogo={<BadgeLogo />} badgeColor="orange-color"/>
                     </div>
 
