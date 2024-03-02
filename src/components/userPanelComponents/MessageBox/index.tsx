@@ -7,7 +7,7 @@ const MessageBox = () => {
         <div className="bg-[var(--back-ground-white)] flex flex-col gap-2 shadow-md w-full lg:mt-24 pt-24 lg:mx-4 p-8 pb-2 rounded-2xl justify-center relative z-0 sm:scale-90 scale-75 md:scale-95">
 
             <div className="z-10 absolute -top-2 -right-4 flex items-center justify-center gap-4">
-                <div className="rounded-full bg-[var(--green-btn)] w-24 h-24 flex justify-center items-center shadow-lg scale-75  lg:scale-100" >
+                <div className="rounded-full bg-[var(--green-btn)] w-24 h-24 flex justify-center items-center shadow-lg scale-75  lg:scale-100 delay-700" >
                     <MessageArt />
                 </div>  
                 <p className="text-4xl" >پیام‌ها</p>
