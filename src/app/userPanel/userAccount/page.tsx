@@ -38,5 +38,3 @@ const userPanel = () => {
     )
 }
 export default userPanel;
-
-

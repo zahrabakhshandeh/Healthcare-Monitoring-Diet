@@ -6,23 +6,23 @@ const Sidebar = () => {
         <div className="flex flex-col text-white w-full bg-[var(--primary-blue)] text-xl gap-10 justify-start items-center xl:pt-11 h-screen">
             <Profile userName="نام‌کاربری"/>
             <ul className="flex gap-6 flex-col justify-center">
-               <li>
-                    <Link href="./">حساب کاربری</Link>
+               <li className="cursor-pointer hover:bg-white hover:text-slate-900">
+                    <Link href={"/userPanel/userAccount"}>حساب کاربری</Link>
                </li>
-               <li>
-                    <Link href="./">ویرایش پروفایل</Link>
+               <li className="cursor-pointer hover:bg-white hover:text-slate-900">
+                    <Link href={"/userPanel/editProfile"}>ویرایش پروفایل</Link>
                </li>
-               <li>
-                    <Link href="./">تنظیمات</Link>
+               <li className="cursor-pointer hover:bg-white hover:text-slate-900">
+                    <Link href={"/userPanel/Settings"}>تنظیمات</Link>
                </li>
-               <li>
-                    <Link href="./">پشتیبانی</Link>
+               <li className="cursor-pointer hover:bg-white hover:text-slate-900">
+                    <Link href={"/"}>پشتیبانی</Link>
                </li>
-               <li>
-                    <Link href="./">تنظیمات</Link>
+               <li className="cursor-pointer hover:bg-white hover:text-slate-900">
+                    <Link href={"/"}>تنظیمات</Link>
                </li>
-               <li>
-                    <Link href="./">خروج</Link>
+               <li className="cursor-pointer hover:bg-white hover:text-slate-900">
+                    <Link href={"/"}>خروج</Link>
                </li>
             </ul>
         </div>
