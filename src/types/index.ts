@@ -1,4 +1,6 @@
-import {FunctionComponent,} from "react";
+import { NextPage } from "next";
+import { AppProps } from "next/app";
+import {FunctionComponent, ReactElement, ReactNode,} from "react";
 
 export interface QuickLinkBoxTypes {
     subject:String, 
