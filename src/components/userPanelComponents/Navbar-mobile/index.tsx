@@ -1,13 +1,22 @@
+'use client'
 import Link from "next/link";
 import HamburgerSvg from "/public/svg/hambergerSVG.svg"
+import React from "react";
+import HamburgerMenu from "../HamburgerMenu";
 
 const NavbarMobile = () => {
+    const [show, setShow] = React.useState(false)
+
+    const toggle = () =>{
+        setShow(!show)
+    }
+
     return(
         <div>
             <ul className="flex flex-row text-white items-center
-            md:text-3xl sm:h-16 md:gap-5">
+            md:text-3xl sm:h-16 md:gap-5 bg-[var(--primary-blue)]">
                 <li>
-                    <button className="flex justify-center items-center ">
+                    <button onClick={toggle} className="flex justify-center items-center">
                         <HamburgerSvg />
                     </button>
                 </li>
@@ -15,6 +24,9 @@ const NavbarMobile = () => {
                     <Link href="./">Logo</Link>
                 </li>
             </ul>
+            {
+                show? <HamburgerMenu />: null
+            }
         </div>
     )
 };
