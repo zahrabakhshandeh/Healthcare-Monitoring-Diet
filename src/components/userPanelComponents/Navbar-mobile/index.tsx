@@ -14,7 +14,7 @@ const NavbarMobile = () => {
     return(
         <nav>
             <ul className="flex flex-row text-white items-center
-            md:text-3xl sm:h-16 md:gap-5 bg-[var(--primary-blue)]">
+            md:text-3xl sm:h-16 md:gap-5 bg-[var(--primary-blue)] gap-2">
                 <li>
                     <button onClick={toggle} className="flex justify-center items-center">
                         <HamburgerSvg />
