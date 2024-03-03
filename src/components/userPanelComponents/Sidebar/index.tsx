@@ -11,22 +11,22 @@ const Sidebar = () => {
 
       <ul className="flex gap-6 flex-col justify-center w-full ms-10 ">
         <li>
-          <SidebarElement text="پروفایل"/>
+          <SidebarElement text="حساب کاربری" logo={<SettingsSvg />} link="/userPanel/userAccount"/>
         </li>
         <li>
-          <SidebarElement  text="پروفایل"/>
+          <SidebarElement  text="ویرایش پروفایل" link="/userPanel/Settings"/>
         </li>
         <li>
-          <SidebarElement text="پروفایل"/>
-        </li>
-        <li>
-          <SidebarElement text="پروفایل"/>
+          <SidebarElement text="پشتیبانی"/>
         </li>
         <li>
           <SidebarElement text="پروفایل"/>
         </li>
         <li>
           <SidebarElement text="پروفایل"/>
+        </li>
+        <li>
+          <SidebarElement text="خروج" link="/"/>
         </li>
       </ul>
     </div>

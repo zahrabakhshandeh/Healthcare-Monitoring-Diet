@@ -1,10 +1,10 @@
 import { sideBarElementType } from "@/types"
 import Link from "next/link"
 
-const SidebarElement = ({text, logo}: sideBarElementType) => {
+const SidebarElement = ({text, logo, link}: sideBarElementType) => {
     return(
         <Link
-          href={"/userPanel/userAccount"}
+          href={`${link}`}
           className="cursor-pointer group hover:bg-white w-full py-4 flex items-center ps-6 rounded-s-3xl hover:ease-in-out hover:duration-150 gap-2"
         >
           {logo}

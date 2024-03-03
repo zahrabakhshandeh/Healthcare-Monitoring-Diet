@@ -22,4 +22,5 @@ export interface ProfileType{
 export interface sideBarElementType{
     text: string, 
     logo?:FunctionComponent|any,
+    link?: string 
 }
