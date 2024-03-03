@@ -5,9 +5,9 @@ const NavbarMobile = () => {
     return(
         <div>
             <ul className="flex flex-row text-white items-center
-            md:text-3xl sm:h-16 space-x-60">
+            md:text-3xl sm:h-16 md:gap-5">
                 <li>
-                    <button className="flex justify-center items-center scale-100">
+                    <button className="flex justify-center items-center ">
                         <HamburgerSvg />
                     </button>
                 </li>
