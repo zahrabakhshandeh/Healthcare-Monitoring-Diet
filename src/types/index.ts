@@ -18,3 +18,8 @@ export interface ProfileType{
     avatar?: string|any,
     userName: string
 }
+
+export interface sideBarElementType{
+    text: string, 
+    logo?:FunctionComponent|any,
+}
