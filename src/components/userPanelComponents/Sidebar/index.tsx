@@ -14,7 +14,7 @@ const Sidebar = () => {
           <SidebarElement text="حساب کاربری" logo={<SettingsSvg />} link="/userPanel/userAccount"/>
         </li>
         <li>
-          <SidebarElement  text="ویرایش پروفایل" link="/userPanel/Settings"/>
+          <SidebarElement text="ویرایش پروفایل" link="/userPanel/Settings"/>
         </li>
         <li>
           <SidebarElement text="پشتیبانی"/>

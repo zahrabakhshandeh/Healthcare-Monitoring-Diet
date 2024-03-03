@@ -12,7 +12,7 @@ const NavbarMobile = () => {
     }
 
     return(
-        <div>
+        <nav>
             <ul className="flex flex-row text-white items-center
             md:text-3xl sm:h-16 md:gap-5 bg-[var(--primary-blue)]">
                 <li>
@@ -27,7 +27,7 @@ const NavbarMobile = () => {
             {
                 show? <HamburgerMenu />: null
             }
-        </div>
+        </nav>
     )
 };
 export default NavbarMobile;

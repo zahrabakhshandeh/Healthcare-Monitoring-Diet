@@ -6,7 +6,7 @@ const SidebarElement = ({text, logo, link}: sideBarElementType) => {
         <Link
           href={`${link}`}
           className="cursor-pointer group md:hover:bg-white hover:bg-white  px-14 py-4 w-full lg:py-4 
-          md:py-6 md:px-52 flex items-center justify-center lg:ps-6 lg:rounded-s-3xl rounded-3xl hover:ease-in-out hover:duration-150 gap-2"
+          md:py-6 md:px-52 flex items-center justify-center lg:ps-4 lg:rounded-s-3xl rounded-3xl hover:ease-in-out hover:duration-150 gap-2"
         >
           {logo}
           <p className="group-hover:text-slate-900 text-white text-2xl lg:text-xl ">{text}</p>
