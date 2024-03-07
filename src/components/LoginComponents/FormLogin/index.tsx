@@ -85,7 +85,7 @@ const FormLogin = () => {
           />
           <Link
             href=""
-            className="text-[var(--link-blue)] md:text-center lg:text-right text-base "
+            className="text-[var(--link-blue)] w-fit md:text-center lg:text-right text-base "
           >
             رمز عبورتون رو فراموش کردید؟
           </Link>
