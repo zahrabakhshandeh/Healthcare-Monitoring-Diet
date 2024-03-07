@@ -44,7 +44,7 @@ const FormLogin = () => {
     <>
       <form
         action=""
-        className="flex w-full md:grid md:grid-cols-2 lg:grid-cols-1 grid-cols-1  flex-col gap-6  "
+        className="flex w-full md:grid md:grid-cols-2 lg:flex lg:flex-col flex-col gap-6  "
         onSubmit={handleSubmit(handelValueInputs)}
         onKeyDown={handleEnter}
       >
